@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NotFound_404 | Cyber Crew</title>
+  <style>
+    :root {
+      --bg: #05070d;
+      --bg-soft: #0a0f1a;
+      --panel: rgba(10, 16, 28, 0.78);
+      --panel-2: rgba(12, 22, 36, 0.92);
+      --line: rgba(0, 255, 200, 0.15);
+      --text: #e8f8ff;
+      --muted: #8ea8b8;
+      --cyan: #38f8d4;
+      --blue: #56b6ff;
+      --green: #7cff83;
+      --pink: #d37cff;
+      --shadow: 0 0 40px rgba(56, 248, 212, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(56, 248, 212, 0.08), transparent 28%),
+        radial-gradient(circle at left, rgba(86, 182, 255, 0.08), transparent 20%),
+        radial-gradient(circle at right bottom, rgba(211, 124, 255, 0.08), transparent 22%),
+        var(--bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, rgba(255,255,255,0.32), transparent 85%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(5, 7, 13, 0.75);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(56, 248, 212, 0.1);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(56, 248, 212, 0.22), rgba(86, 182, 255, 0.16));
+      border: 1px solid rgba(56, 248, 212, 0.18);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 8px;
+    }
+
+    .brand-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid rgba(56, 248, 212, 0.2);
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: #041015;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      box-shadow: 0 0 28px rgba(56, 248, 212, 0.18);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 96px 0 70px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 248, 212, 0.16);
+      background: rgba(56, 248, 212, 0.08);
+      color: var(--cyan);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .glitch {
+      font-size: 62px;
+      line-height: 1.02;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      text-shadow: 0 0 25px rgba(56, 248, 212, 0.12);
+    }
+
+    .glitch span {
+      color: var(--cyan);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .chip-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(86, 182, 255, 0.14);
+      color: #ccefff;
+      font-size: 13px;
+    }
+
+    .hero-visual {
+      background: linear-gradient(180deg, rgba(13, 24, 38, 0.9), rgba(6, 10, 18, 0.95));
+      border: 1px solid rgba(56, 248, 212, 0.12);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(56, 248, 212, 0.08), transparent 45%, rgba(86, 182, 255, 0.05));
+      pointer-events: none;
+    }
+
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .terminal-bar span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+    }
+
+    .logo-panel {
+  border-radius: 22px;
+  background: #000;
+  padding: 12px;
+  border: 1px solid rgba(56, 248, 212, 0.18);
+  box-shadow: 0 0 30px rgba(56, 248, 212, 0.10);
+  margin-bottom: 18px;
+}
+
+.logo-panel img {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 14px;
+}
+
+    .scan-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .scan-card,
+    .card,
+    .member-card,
+    .contact-box,
+    .about-box {
+      background: var(--panel);
+      border: 1px solid rgba(56, 248, 212, 0.11);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .scan-card {
+      padding: 16px;
+    }
+
+    .scan-card small,
+    .section-head small {
+      display: inline-block;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+
+    .scan-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .scan-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .about-grid,
+    .service-grid,
+    .team-grid,
+    .contact-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-grid {
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: stretch;
+    }
+
+    .about-box,
+    .card,
+    .member-card,
+    .contact-box {
+      padding: 26px;
+    }
+
+    .about-box h3,
+    .card h3,
+    .member-card h3,
+    .contact-box h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .about-box p,
+    .card p,
+    .member-card p,
+    .contact-box p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .list li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      color: #dffbff;
+    }
+
+    .list li::before {
+      content: ">";
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .card:hover,
+    .member-card:hover,
+    .about-box:hover,
+    .contact-box:hover {
+      transform: translateY(-4px);
+      transition: 0.25s ease;
+      border-color: rgba(56, 248, 212, 0.22);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(56, 248, 212, 0.16), rgba(86, 182, 255, 0.12));
+      border: 1px solid rgba(56, 248, 212, 0.14);
+      color: var(--cyan);
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
+
+    .member-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      background:
+        linear-gradient(135deg, rgba(56, 248, 212, 0.08), rgba(86, 182, 255, 0.04)),
+        rgba(255,255,255,0.02);
+      border: 1px dashed rgba(56, 248, 212, 0.25);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 18px;
+      color: var(--cyan);
+      font-weight: 700;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .member-photo::before {
+      content: "SELFIE / PORTRAIT";
+      opacity: 0.95;
+      z-index: 2;
+    }
+
+    .member-photo::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(56, 248, 212, 0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    }
+
+    .member-role {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(56, 248, 212, 0.08);
+      border: 1px solid rgba(56, 248, 212, 0.14);
+      color: var(--cyan);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+    }
+
+    .member-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .member-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      color: #d7e7f4;
+      font-size: 12px;
+    }
+
+    .notice {
+      margin-top: 12px;
+      color: var(--cyan);
+      font-size: 13px;
+    }
+
+    .contact-wrap {
+      padding: 30px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(56, 248, 212, 0.08), rgba(86, 182, 255, 0.06), rgba(211, 124, 255, 0.06));
+      border: 1px solid rgba(56, 248, 212, 0.14);
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+
+    .contact-wrap h2 {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+
+    .contact-wrap p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(56, 248, 212, 0.08);
+      padding: 28px 0 40px;
+      text-align: center;
+      color: #6c8392;
+      font-size: 14px;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .link-list a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(56, 248, 212, 0.11);
+      color: #dffbff;
+      transition: 0.25s ease;
+    }
+
+    .link-list a:hover {
+      color: var(--cyan);
+      border-color: rgba(56, 248, 212, 0.22);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .service-grid,
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .glitch {
+        font-size: 50px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .service-grid,
+      .team-grid,
+      .scan-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+
+      .glitch {
+        font-size: 36px;
+      }
+
+      .section-head h2,
+      .contact-wrap h2 {
+        font-size: 29px;
+      }
+
+      .brand strong {
+        font-size: 18px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo file: 650511332_1271217964969507_484888135647833824_n.png -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <div class="brand-badge">
+          <img src="logo5.png" alt="NotFound_404 logo" />
+        </div>
+        <div>
+          <small>cyber crew</small>
+          <strong>NotFound_404</strong>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About us</a>
+        <a href="#services">What we do</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#team" class="btn btn-primary">Contact the Team</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">[ ONLINE ] FRONT-END / CYBER / CTF / AI / DATA / GAME DEV</div>
+        <h1 class="glitch">NotFound_404 <span>Mongolian Junior Developer Team</span></h1>
+        <p>
+          NotFound_404 is a Mongolian junior team working across front-end development, cybersecurity, CTF, AI engineering,
+          data analytics, and game development. This site is a reflection of our identity, style, and the kind of work we want to do. We are passionate about
+        </p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">What We Do</a>
+          <a href="#contact" class="btn btn-secondary">Contact / Social</a>
+        </div>
+
+        <div class="chip-wrap">
+          <span class="chip">Front-end Engineering</span>
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">CTF Participation</span>
+          <span class="chip">AI Engineering</span>
+          <span class="chip">Data Analytics</span>
+          <span class="chip">Game Development</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="logo-panel">
+          <img src="logo5.png" alt="NotFound_404 main logo" />
+        </div>
+
+        <div class="scan-box">
+          <div class="scan-card">
+            <small>focus</small>
+            <strong>Security + Creativity</strong>
+            <p>A team that combines UI thinking, systems thinking, a cyber mindset, and product execution in one place.</p>
+          </div>
+          <div class="scan-card">
+            <small>style</small>
+            <strong>Dark / Neon / Tactical</strong>
+            <p>A visual style built around sharp angles, glow effects, grid lines, and a terminal-inspired cyber aesthetic.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <small>About the Crew</small>
+        <h2>We build at the intersection of code, security, AI, and data.</h2>
+        <p>
+          We are a multidisciplinary team passionate about crafting modern digital experiences, solving complex security challenges, and building intelligent systems powered by data. From sleek front-end interfaces to cybersecurity research, automation, analytics, and interactive products, we turn ideas into practical and impactful solutions.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Who is NotFound_404?</h3>
+          <p>
+            NotFound_404 is a small but driven team focused on building smart, secure, and visually refined digital products. Our work blends modern web development, cybersecurity, AI engineering, data analytics, and interactive design.
+We value speed, clarity, and purposeful execution—building systems that are not only functional, but meaningful and memorable.
+          </p>
+          <ul class="list">
+            <li>Strong focus on front-end quality, UI, and user interaction</li>
+            <li>Security-minded thinking shaped by CTF and real-world practice</li>
+            <li>Practical AI and data solutions with clear business value</li>
+            <li>Creative, collaborative, and always ready to experiment</li>
+          </ul>
+        </div>
+
+        <div class="about-box">
+          <h3>Quick Stack</h3>
+          <ul class="list">
+            <li>HTML / CSS / JavaScript / React</li>
+            <li>Cybersecurity / CTF / OSINT / Web Security</li>
+            <li>AI Engineering / Prompt / Automation</li>
+            <li>Data Analytics / Dashboard / Visualization</li>
+            <li>Game Logic / UI / Prototype / Interactive</li>
+          </ul>
+          <p class="notice">We also work across branding, research-driven experimentation, and digital product design to create experiences that feel sharp, modern, and technically solid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <small>What We Do</small>
+        <h2>Core areas we focus on</h2>
+        <p>We design and build digital experiences that combine usability, performance, security, and innovation. Our work spans modern interfaces, secure systems, intelligent automation, data-driven solutions, and interactive product development.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="card">
+          <div class="icon">⌘</div>
+          <h3>Front-end Engineering</h3>
+          <p>We build responsive websites, dashboards, admin systems, and interactive interfaces with a strong focus on performance, usability, and clean user experience.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛡</div>
+          <h3>Cybersecurity</h3>
+          <p>We approach products with a security-first mindset, covering web security fundamentals, secure system design, vulnerability awareness, and practical defensive thinking.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚑</div>
+          <h3>CTF</h3>
+          <p>We grow through Capture The Flag challenges that sharpen our problem-solving skills across web, reverse engineering, crypto, forensics, and exploitation concepts.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>AI Engineering</h3>
+          <p>We create AI-powered workflows, prompt systems, automation tools, assistant experiences, and practical integrations that improve productivity and product value.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Data Analytics</h3>
+          <p>We turn raw data into useful insights through cleanup, reporting pipelines, KPI tracking, dashboards, and visualizations that support better decisions.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎮</div>
+          <h3>Game Development</h3>
+          <p>We explore gameplay systems, UI prototypes, interaction design, and experimental mechanics to create engaging and playful digital experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div class="section-head">
+        <small>Team Members</small>
+        <h2>Meet the people behind NotFound_404</h2>
+        <p>
+          A small team with a shared passion for building secure, modern, and meaningful digital experiences. Each member brings a unique mix of technical skill, creative thinking, and problem-solving energy to the projects we build. </code>.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="member-card">
+          <div class="member-photo"></div>
+          <span class="member-role">Nero_404 (leader)</span>
+          <h3>Bayarbayasgalan Enkhtulga</h3>
+          <p>
+            Bayarbayasgalan Enkhtulga is an AI engineer focused on building practical, intelligent systems that solve real-world problems. He works on AI-powered workflows, prompt design, automation, and data-driven solutions that improve productivity and user experience. His approach combines technical precision with experimentation, allowing him to turn complex ideas into usable products and tools. With a strong interest in innovation, he is passionate about creating systems that are both efficient and impactful.
+          </p>
+          <div class="member-meta">
+            <span>AI engineer</span>
+            <span>Arduino Engineer</span>
+            <span>Python Engineer</span>
+            <span>CTF team leader</span>
+            <span>Cybersecurity</span>
+            <span>Data Analytics</span>
+            <span>Misc</span>
+            <span>Cryptography</span>
+            <span>OSINT</span>
+
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"></div>
+          <span class="member-role">Phantom_404</span>
+          <h3>Khuslen Ganbat</h3>
+          <p>
+            Hello, my name is Khuslen. I study in the 9th grade. I am passionate about modern technology and cybersecurity. I enjoy learning new things in these fields. In the future, I want to become a cybersecurity expert and work to protect people and create a safer digital world.
+          </p>
+          <div class="member-meta">
+            <span>Cybersecurity</span>
+            <span>CTF</span>
+            <span>Web Security</span>
+            <span>Problem Solving</span>
+            <span>Python Engineer</span>
+            <span>C++ Engineer</span>
+            <span>Designer</span>
+            <span>UI / UX</span>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"></div>
+          <span class="member-role">Bloxer_404</span>
+          <h3>Tsogterdene Margaderdene</h3>
+          <p>
+            Add information here about AI engineering, data analytics, automation, dashboards, insight generation,
+            model workflows, or game development.
+          </p>
+          <div class="member-meta">
+            <span>AI Engineering</span>
+            <span>Data Analytics</span>
+            <span>Automation</span>
+            <span>Forensics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-wrap">
+        <small style="display:inline-block; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Contact / Links</small>
+        <h2>Let’s connect and build something meaningful</h2>
+        <p>
+          Whether it’s collaboration, freelance work, creative ideas, technical discussions, or team opportunities, we’re always open to connecting with people who share the same passion for technology, security, AI, and digital innovation.
+        </p>
+        <div class="hero-actions" style="margin-bottom: 0;">
+          <a href="mailto:hello@notfound404.dev" class="btn btn-primary">Email Us</a>
+          <a href="#home" class="btn btn-secondary">Back to Top</a>
+        </div>
+      </div>
+
+      <div style="display:grid; gap:22px;">
+        <div class="contact-box">
+          <h3>Email</h3>
+          <p>pynotix.py@gmail.com</p>
+        </div>
+        <div class="contact-box">
+          <h3>GitHub</h3>
+          <p>github.com/bebecpp</p>
+        </div>
+        <div class="contact-box">
+          <h3>Social / CTF / Portfolio</h3>
+          <div class="link-list">
+            <a href="https://discord.com/bebecringe" target="_blank" rel="noopener">Discord</a>
+            <a href="https://t.me/bebecringe" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener">CTFTime</a>
+            <a href="https://www.linkedin.com/in/bayarbayasgalan-enkhtulga-2219a13b9/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://notfound404ctf.blogspot.com/" target="_blank" rel="noopener">Portfolio</a>
+          </div>
+        </div>
+        <div class="contact-box">
+          <h3>Team Links</h3>
+          <div class="link-list">
+            <a href="https://github.com/bebecpp" target="_blank" rel="noopener">GitHub Profile</a>
+            <a href="mailto:pynotix.py@gmail.com">Email the Team</a>
+            <a href="https://www.facebook.com/profile.php?id=61572243104711" target="_blank" rel="noopener"> Facebook </a>
+            <a href="https://nero404.blogspot.com/" target="_blank" rel="noopener"> Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2026 NotFound_404 — Build. Break. Secure. Analyze. Create.</div>
+  </footer>
+</body>
+</html>
