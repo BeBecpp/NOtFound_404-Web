@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NotFound_404 | Cyber Crew</title>
+  <meta name="description" content="NotFound_404 — Mongolian junior developer team working across front-end, cybersecurity, CTF, AI engineering, data analytics, and game development." />
+  <meta name="theme-color" content="#05070d" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:title" content="NotFound_404 | Cyber Crew" />
+  <meta property="og:description" content="A Mongolian junior developer team: front-end, cybersecurity, CTF, AI, data, and game dev." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo5.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="logo5.png" />
+  <link rel="preload" href="logo5.png" as="image" />
   <style>
     :root {
       --bg: #05070d;
@@ -18,6 +28,7 @@
       --green: #7cff83;
       --pink: #d37cff;
       --shadow: 0 0 40px rgba(56, 248, 212, 0.08);
+      --focus: 0 0 0 3px rgba(56, 248, 212, 0.35);
     }
 
     * {
@@ -28,6 +39,18 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+      }
     }
 
     body {
@@ -60,6 +83,13 @@
       color: inherit;
     }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+      border-radius: 12px;
+    }
+
     img {
       max-width: 100%;
       display: block;
@@ -77,6 +107,22 @@
       background: rgba(5, 7, 13, 0.75);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(56, 248, 212, 0.1);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(10, 16, 28, 0.92);
+      border: 1px solid rgba(56, 248, 212, 0.22);
+      color: var(--text);
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: 12px;
     }
 
     .nav-inner {
@@ -138,6 +184,30 @@
 
     .nav-links a:hover {
       color: var(--cyan);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(56, 248, 212, 0.18);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 11px 14px;
+      cursor: pointer;
+      line-height: 0;
+    }
+
+    .nav-toggle .bars {
+      display: grid;
+      gap: 6px;
+    }
+
+    .nav-toggle .bars span {
+      width: 22px;
+      height: 2px;
+      background: rgba(232, 248, 255, 0.78);
+      border-radius: 999px;
+      display: block;
     }
 
     .btn {
@@ -327,6 +397,10 @@
 
     section {
       padding: 78px 0;
+    }
+
+    section[id] {
+      scroll-margin-top: 92px;
     }
 
     .section-head {
@@ -555,6 +629,38 @@
   .nav-links {
     display: none;
   }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 4%;
+    top: 78px;
+    padding: 14px;
+    width: min(320px, 92vw);
+    border-radius: 18px;
+    background: rgba(5, 7, 13, 0.92);
+    border: 1px solid rgba(56, 248, 212, 0.12);
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
 }
 
     @media (max-width: 760px) {
@@ -597,6 +703,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
   <!-- Logo file: 650511332_1271217964969507_484888135647833824_n.png -->
   <header class="navbar">
     <div class="container nav-inner">
@@ -610,13 +717,17 @@
         </div>
       </a>
 
-      <nav class="nav-links">
-  <a href="#about">About us</a>
-  <a href="#services">What we do</a>
-  <a href="#projects">Projects</a>
-  <a href="#team">Team</a>
-  <a href="#contact">Contact</a>
-</nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About us</a>
+        <a href="#services">What we do</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
 
       <a href="#team" class="btn btn-primary">Contact the Team</a>
@@ -630,7 +741,7 @@
         <h1 class="glitch">NotFound_404 <span>Mongolian Junior Developer Team</span></h1>
         <p>
           NotFound_404 is a Mongolian junior team working across front-end development, cybersecurity, CTF, AI engineering,
-          data analytics, and game development. This site is a reflection of our identity, style, and the kind of work we want to do. We are passionate about
+          data analytics, and game development. This site is a reflection of our identity, style, and the kind of work we want to do. We are passionate about learning fast, building real projects, and growing as engineers together.
         </p>
 
         <div class="hero-actions">
@@ -791,7 +902,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
       <div class="card">
   <div class="icon">🤖</div>
   <h3>
-    <a href="https://github.com/BeBecpp/CNN-Image-Classification" target="_blank" rel="noopener">
+    <a href="https://github.com/BeBecpp/CNN-Image-Classification" target="_blank" rel="noopener noreferrer">
       CNN Image Classification
     </a>
   </h3>
@@ -810,7 +921,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
     <a
       href="https://github.com/BeBecpp/CNN-Image-Classification"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       class="btn btn-secondary"
       style="width: 100%;"
     >
@@ -822,7 +933,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
      <div class="card">
   <div class="icon">🛡️</div>
   <h3>
-    <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener">
+    <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener noreferrer">
       CTF & Security Practice
     </a>
   </h3>
@@ -843,7 +954,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
     <a
       href="https://ctftime.org/team/429017"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       class="btn btn-secondary"
       style="width: 100%;"
     >
@@ -897,7 +1008,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="images/bayar.jpeg" alt="Bayarbayasgalan Enkhtulga" />
+  <img src="images/bayar.jpeg" alt="Khuslen Ganbat" />
 </div>
         <span class="member-role">Phantom_404</span>
         <h3>Khuslen Ganbat</h3>
@@ -920,7 +1031,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="images/bayar.jpg" alt="Bayarbayasgalan Enkhtulga" />
+  <img src="images/bayar.jpg" alt="Tsogterdene Margaderdene" />
 </div>
         <span class="member-role">Bloxer_404</span>
         <h3>Tsogterdene Margaderdene</h3>
@@ -941,10 +1052,10 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="images/bayar.jpg" alt="Bayarbayasgalan Enkhtulga" />
+  <img src="images/bayar.jpg" alt="Nomin-Erdene" />
 </div>
         <span class="member-role">:3_404</span>
-        <h3> Nomin-Erdene</h3>
+        <h3>Nomin-Erdene</h3>
         <p>
           Add this member’s real introduction here. You can write about their interests, current skills,
           learning goals, and what role they play in the team such as front-end, security, design,
@@ -986,7 +1097,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="bagsh.jpg" alt="Bayarbayasgalan Enkhtulga" />
+  <img src="bagsh.jpg" alt="Dashtseren Altanzul" />
 </div>
         <span class="member-role">Teacher / Mentor</span>
         <h3>Dashtseren Altanzul</h3>
@@ -1026,25 +1137,25 @@ We value speed, clarity, and purposeful execution—building systems that are no
         </div>
         <div class="contact-box">
           <h3>GitHub</h3>
-          <p>github.com/bebecpp</p>
+          <p><a href="https://github.com/bebecpp" target="_blank" rel="noopener noreferrer">github.com/bebecpp</a></p>
         </div>
         <div class="contact-box">
           <h3>Social / CTF / Portfolio</h3>
           <div class="link-list">
-            <a href="https://discord.com/bebecringe" target="_blank" rel="noopener">Discord</a>
-            <a href="https://t.me/bebecringe" target="_blank" rel="noopener">Telegram</a>
-            <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener">CTFTime</a>
-            <a href="https://www.linkedin.com/in/bayarbayasgalan-enkhtulga-2219a13b9/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://notfound404ctf.blogspot.com/" target="_blank" rel="noopener">Portfolio</a>
+            <a href="https://discord.com/bebecringe" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="https://t.me/bebecringe" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener noreferrer">CTFTime</a>
+            <a href="https://www.linkedin.com/in/bayarbayasgalan-enkhtulga-2219a13b9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://notfound404ctf.blogspot.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
           </div>
         </div>
         <div class="contact-box">
           <h3>Team Links</h3>
           <div class="link-list">
-            <a href="https://github.com/bebecpp" target="_blank" rel="noopener">GitHub Profile</a>
+            <a href="https://github.com/bebecpp" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
             <a href="mailto:pynotix.py@gmail.com">Email the Team</a>
-            <a href="https://www.facebook.com/profile.php?id=61572243104711" target="_blank" rel="noopener"> Facebook </a>
-            <a href="https://nero404.blogspot.com/" target="_blank" rel="noopener"> Portfolio</a>
+            <a href="https://www.facebook.com/profile.php?id=61572243104711" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://nero404.blogspot.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
           </div>
         </div>
       </div>
@@ -1054,5 +1165,40 @@ We value speed, clarity, and purposeful execution—building systems that are no
   <footer class="footer">
     <div class="container">© 2026 NotFound_404 — Build. Break. Secure. Analyze. Create.</div>
   </footer>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#primary-nav');
+      if (!toggle || !nav) return;
+
+      const setOpen = (open) => {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.contains('is-open');
+        setOpen(!isOpen);
+      });
+
+      nav.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (a) setOpen(false);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!nav.classList.contains('is-open')) return;
+        if (e.target === toggle || toggle.contains(e.target)) return;
+        if (e.target === nav || nav.contains(e.target)) return;
+        setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>
