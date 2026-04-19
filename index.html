@@ -131,6 +131,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
+      position: relative;
     }
 
     .brand {
@@ -638,17 +639,19 @@
 
   .nav-links {
     position: absolute;
-    right: 4%;
-    top: 78px;
+    right: 0;
+    top: calc(100% + 10px);
     padding: 14px;
     width: min(320px, 92vw);
     border-radius: 18px;
     background: rgba(5, 7, 13, 0.92);
+    backdrop-filter: blur(16px);
     border: 1px solid rgba(56, 248, 212, 0.12);
     box-shadow: var(--shadow);
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+    z-index: 1001;
   }
 
   .nav-links a {
@@ -697,6 +700,10 @@
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .nav-links {
+    width: min(360px, 92vw);
   }
 }
     
@@ -756,6 +763,11 @@
           <span class="chip">AI Engineering</span>
           <span class="chip">Data Analytics</span>
           <span class="chip">Game Development</span>
+          <span class="chip">Arduino</span>
+          <span class="chip">Back-End Engineering</span>
+          <span class="chip">Python Engineering</span>
+          <span class="chip">C++ Engineering</span>
+          <span class="chip">Mobile Development</span>
         </div>
       </div>
 
@@ -1050,50 +1062,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
         </div>
       </div>
 
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="images/bayar.jpg" alt="Nomin-Erdene" />
-</div>
-        <span class="member-role">:3_404</span>
-        <h3>Nomin-Erdene</h3>
-        <p>
-          Add this member’s real introduction here. You can write about their interests, current skills,
-          learning goals, and what role they play in the team such as front-end, security, design,
-          AI, data, or development support.
-        </p>
-        <div class="member-meta">
-          <span>Front-end</span>
-          <span>HTML / CSS</span>
-          <span>Robotnic</span>
-          <span>Designer</span>
-          <span>Tester</span>
-          <span>Arduino</span>
-          <span>C++ Engineer</span>
-          <span>Python Engineer</span>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="byamba.webp" alt="Byambatsogt" />
-</div>
-        <span class="member-role">sMuRfKiD_404</span>
-        <h3>Byambatsogt</h3>
-        <p>
-          Add this member’s real introduction here. You can describe their technical strengths, interests,
-          and long-term goals. This section works well for cybersecurity, programming, AI, robotics,
-          or project-based contributions.
-        </p>
-        <div class="member-meta">
-          <span>Cybersecurity</span>
-          <span>Python</span>
-          <span>CTF</span>
-          <span>Research</span>
-          <span>C++ Engineer</span>
-          <span>Python Engineer</span>
-          <span>senior</span>
-        </div>
-      </div>
+      
 
       <div class="member-card">
         <div class="member-photo">

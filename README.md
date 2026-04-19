@@ -77,7 +77,3 @@ npx http-server -p 5173
 ## Assets
 
 Зургийн файлууд (`logo5.png`, `images/*` гэх мэт) зөв замаар (relative path) байрласан эсэхийг шалгаарай.
-
-## License
-
-License-аа тодорхойлох бол `LICENSE` файл нэмнэ үү. (Ж: MIT)
