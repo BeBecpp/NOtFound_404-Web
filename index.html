@@ -10,10 +10,10 @@
   <meta property="og:title" content="NotFound_404 | Cyber Crew" />
   <meta property="og:description" content="A Mongolian junior developer team: front-end, cybersecurity, CTF, AI, data, and game dev." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo5.png" />
+  <meta property="og:image" content="img/logo5.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="logo5.png" />
-  <link rel="preload" href="logo5.png" as="image" />
+  <link rel="icon" href="img/logo5.png" />
+  <link rel="preload" href="img/logo5.png" as="image" />
   <style>
     :root {
       --bg: #05070d;
@@ -440,7 +440,8 @@
 }
 
 .team-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .contact-grid {
@@ -562,6 +563,46 @@
       color: var(--cyan);
       font-size: 13px;
     }
+
+    #team .member-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 20px;
+      height: 100%;
+    }
+
+    #team .member-photo {
+      aspect-ratio: 4 / 3;
+      margin-bottom: 14px;
+    }
+
+    #team .member-card h3 {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    #team .member-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    #team .member-role {
+      font-size: 11px;
+      padding: 6px 10px;
+      letter-spacing: 1.2px;
+    }
+
+    #team .member-meta {
+      gap: 8px;
+    }
+
+    #team .member-meta span {
+      padding: 7px 9px;
+      font-size: 11px;
+    }
+
 
     .contact-wrap {
       padding: 30px;
@@ -711,12 +752,12 @@
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to content</a>
-  <!-- Logo file: 650511332_1271217964969507_484888135647833824_n.png -->
+  <!-- Image files are loaded from the ing/ folder. -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <div class="brand-badge">
-          <img src="logo5.png" alt="NotFound_404 logo" />
+          <img src="img/logo5.png" alt="NotFound_404 logo" />
         </div>
         <div>
           <small>cyber crew</small>
@@ -777,7 +818,7 @@
         </div>
 
         <div class="logo-panel">
-          <img src="logo5.png" alt="NotFound_404 main logo" />
+          <img src="img/logo5.png" alt="NotFound_404 main logo" />
         </div>
 
         <div class="scan-box">
@@ -974,6 +1015,72 @@ We value speed, clarity, and purposeful execution—building systems that are no
     </a>
   </div>
 </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>
+          <a href="https://github.com/BeBecpp/AI_Assistant_Chatbot" target="_blank" rel="noopener noreferrer">
+            AI Assistant Chatbot
+          </a>
+        </h3>
+        <p>
+          A Flask-based AI chatbot built for myguide.ubcircus.com. It includes a clean black-and-white draggable popup chat UI,
+          a JSON API, environment-based configuration, error handling, and a Lite NLP fallback so the demo can still work even
+          without a production AI API key.
+        </p>
+        <div class="member-meta">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>Chatbot</span>
+          <span>Lite NLP</span>
+          <span>Gemini / OpenAI</span>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <a
+            href="https://github.com/BeBecpp/AI_Assistant_Chatbot"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+            style="width: 100%;"
+          >
+            View Project on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🕹️</div>
+        <h3>
+          <a href="https://github.com/FluxKnight/Runner_void" target="_blank" rel="noopener noreferrer">
+            Runner Void
+          </a>
+        </h3>
+        <p>
+          A creative game-development repository prepared for a fast-paced runner concept. The project can grow into an
+          experimental prototype focused on movement, obstacle logic, level flow, responsive controls, and a dark cyber-style
+          gameplay experience.
+        </p>
+        <div class="member-meta">
+          <span>Game Dev</span>
+          <span>Runner</span>
+          <span>Prototype</span>
+          <span>Gameplay Logic</span>
+          <span>UI / UX</span>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <a
+            href="https://github.com/FluxKnight/Runner_void"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+            style="width: 100%;"
+          >
+            View Project on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -993,7 +1100,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
     <div class="team-grid">
       <div class="member-card">
         <div class="member-photo">
-  <img src="bebe.jpeg" alt="Bayarbayasgalan Enkhtulga" />
+  <img src="img/bebe.jpeg" alt="Bayarbayasgalan Enkhtulga" />
 </div>
         <span class="member-role">Nero_404 (leader)</span>
 
@@ -1020,7 +1127,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="huslen.jpg" alt="Khuslen Ganbat" />
+  <img src="img/xvslen.jpg" alt="Khuslen Ganbat" />
 </div>
         <span class="member-role">Phantom_404</span>
         <h3>Khuslen Ganbat</h3>
@@ -1043,7 +1150,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="images/bayar.jpg" alt="Tsogterdene Margaderdene" />
+  <img src="img/bayar.jpg" alt="Tsogterdene Margaderdene" />
 </div>
         <span class="member-role">Bloxer_404</span>
         <h3>Tsogterdene Margaderdene</h3>
@@ -1066,7 +1173,7 @@ We value speed, clarity, and purposeful execution—building systems that are no
 
       <div class="member-card">
         <div class="member-photo">
-  <img src="bagsh.jpg" alt="Dashtseren Altanzul" />
+  <img src="img/bagsh.jpg" alt="Dashtseren Altanzul" />
 </div>
         <span class="member-role">Teacher / Mentor</span>
         <h3>Dashtseren Altanzul</h3>
