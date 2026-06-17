@@ -1,67 +1,49 @@
-<!DOCTYPE html>
-<html lang="mn">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NotFound_404 | Cyber Crew</title>
-  <meta name="description" content="NotFound_404 — Mongolian junior developer team working across front-end, cybersecurity, CTF, AI engineering, data analytics, and game development." />
-  <meta name="theme-color" content="#05070d" />
-  <meta name="color-scheme" content="dark" />
-  <meta property="og:title" content="NotFound_404 | Cyber Crew" />
-  <meta property="og:description" content="A Mongolian junior developer team: front-end, cybersecurity, CTF, AI, data, and game dev." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07010f" />
+  <meta name="description" content="NOtFound_404 is a Mongolia-based builder team shipping AI systems, full-stack products, defensive cybersecurity tools, CTF utilities, data experiments, and retro-grade web experiences." />
+  <meta property="og:title" content="NOtFound_404 - Builder Team" />
+  <meta property="og:description" content="AI engineering. Full-stack products. Defensive security. Retro-grade execution." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="img/logo5.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="img/logo5.png" />
-  <link rel="preload" href="img/logo5.png" as="image" />
+  <title>NOtFound_404 - Builder Team</title>
   <style>
     :root {
-      --bg: #05070d;
-      --bg-soft: #0a0f1a;
-      --panel: rgba(10, 16, 28, 0.78);
-      --panel-2: rgba(12, 22, 36, 0.92);
-      --line: rgba(0, 255, 200, 0.15);
-      --text: #e8f8ff;
-      --muted: #8ea8b8;
-      --cyan: #38f8d4;
-      --blue: #56b6ff;
-      --green: #7cff83;
-      --pink: #d37cff;
-      --shadow: 0 0 40px rgba(56, 248, 212, 0.08);
-      --focus: 0 0 0 3px rgba(56, 248, 212, 0.35);
+      --bg: #07010f;
+      --bg2: #100525;
+      --ink: #fff7f7;
+      --muted: #b7b0c9;
+      --cyan: #22f7ff;
+      --pink: #ff4fd8;
+      --lime: #a8ff3e;
+      --yellow: #ffd95a;
+      --purple: #7c4dff;
+      --blue: #3d7cff;
+      --red: #ff4c64;
+      --panel: #130a2a;
+      --panel2: #1d123a;
+      --line: rgba(255,255,255,.20);
+      --black: #020006;
+      --max: 1220px;
+      --shadow: 8px 8px 0 var(--black);
+      --shadow-sm: 5px 5px 0 var(--black);
+      --font: ui-monospace, "SFMono-Regular", "Cascadia Code", "Liberation Mono", Menlo, Consolas, monospace;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition-duration: 0.001ms !important;
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, rgba(56, 248, 212, 0.08), transparent 28%),
-        radial-gradient(circle at left, rgba(86, 182, 255, 0.08), transparent 20%),
-        radial-gradient(circle at right bottom, rgba(211, 124, 255, 0.08), transparent 22%),
-        var(--bg);
+      margin: 0;
       min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(34,247,255,.20), transparent 18rem),
+        radial-gradient(circle at 88% 8%, rgba(255,79,216,.20), transparent 20rem),
+        radial-gradient(circle at 50% 100%, rgba(168,255,62,.12), transparent 18rem),
+        linear-gradient(180deg, var(--bg), #09031b 50%, #04000c);
       overflow-x: hidden;
     }
 
@@ -69,1212 +51,1386 @@
       content: "";
       position: fixed;
       inset: 0;
+      z-index: -2;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: linear-gradient(to bottom, rgba(255,255,255,0.32), transparent 85%);
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(255,79,216,.035) 25%, transparent 25%, transparent 75%, rgba(34,247,255,.035) 75%);
+      background-size: 24px 24px, 24px 24px, 48px 48px;
+      image-rendering: pixelated;
       pointer-events: none;
-      z-index: -1;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: none;
-      box-shadow: var(--focus);
-      border-radius: 12px;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
       z-index: 999;
-      background: rgba(5, 7, 13, 0.75);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(56, 248, 212, 0.1);
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.045) 0,
+        rgba(255,255,255,.045) 1px,
+        transparent 1px,
+        transparent 5px
+      );
+      mix-blend-mode: overlay;
+      opacity: .55;
     }
 
-    .skip-link {
-      position: absolute;
-      left: -999px;
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .wrap {
+      width: min(calc(100% - 28px), var(--max));
+      margin-inline: auto;
+    }
+
+    .pixel {
+      border: 2px solid var(--line);
+      background: linear-gradient(180deg, rgba(29,18,58,.96), rgba(13,5,31,.96));
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      position: sticky;
       top: 12px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: rgba(10, 16, 28, 0.92);
-      border: 1px solid rgba(56, 248, 212, 0.22);
-      color: var(--text);
-      z-index: 1000;
+      z-index: 50;
+      margin-top: 12px;
     }
 
-    .skip-link:focus {
-      left: 12px;
-    }
-
-    .nav-inner {
-      min-height: 78px;
-      display: flex;
+    .nav {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
       align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      position: relative;
+      padding: 12px;
+      border: 2px solid rgba(255,255,255,.25);
+      background: rgba(10,4,30,.88);
+      box-shadow: 7px 7px 0 #000;
+      backdrop-filter: blur(10px);
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 14px;
-      min-width: 0;
+      gap: 10px;
+      min-width: max-content;
+      font-weight: 900;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
     }
 
     .brand-badge {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(56, 248, 212, 0.22), rgba(86, 182, 255, 0.16));
-      border: 1px solid rgba(56, 248, 212, 0.18);
       display: grid;
       place-items: center;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      padding: 8px;
-    }
-
-    .brand-badge img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--cyan);
+      background:
+        linear-gradient(90deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
+        #12042c;
+      box-shadow: 4px 4px 0 #000;
+      color: var(--cyan);
+      font-size: 12px;
     }
 
     .brand small {
       display: block;
-      color: var(--cyan);
-      letter-spacing: 2px;
-      font-size: 11px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .brand strong {
-      display: block;
-      font-size: 22px;
-      letter-spacing: 1px;
+      color: var(--yellow);
+      font-size: 10px;
+      letter-spacing: .12em;
+      margin-top: 4px;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: var(--cyan);
-    }
-
-    .nav-toggle {
-      display: none;
-      border: 1px solid rgba(56, 248, 212, 0.18);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text);
-      border-radius: 14px;
-      padding: 11px 14px;
-      cursor: pointer;
-      line-height: 0;
-    }
-
-    .nav-toggle .bars {
-      display: grid;
+      justify-content: center;
       gap: 6px;
+      min-width: 0;
     }
 
-    .nav-toggle .bars span {
-      width: 22px;
-      height: 2px;
-      background: rgba(232, 248, 255, 0.78);
-      border-radius: 999px;
-      display: block;
+    .nav-link {
+      position: relative;
+      padding: 10px 11px;
+      border: 2px solid transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: .16s ease;
+      white-space: nowrap;
     }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--ink);
+      border-color: var(--cyan);
+      background: rgba(34,247,255,.10);
+      box-shadow: 3px 3px 0 #000;
+      transform: translate(-2px,-2px);
+    }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .menu-btn { display: none; width: 44px; padding-inline: 0; }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 13px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid rgba(56, 248, 212, 0.2);
-      transition: 0.25s ease;
+      min-height: 44px;
+      padding: 0 14px;
+      border: 2px solid rgba(255,255,255,.25);
+      background: #170735;
+      color: var(--ink);
+      box-shadow: 4px 4px 0 #000;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
       cursor: pointer;
-    }
-
-    .btn-primary {
-      color: #041015;
-      background: linear-gradient(135deg, var(--cyan), var(--green));
-      box-shadow: 0 0 28px rgba(56, 248, 212, 0.18);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text);
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translate(-2px,-2px);
+      box-shadow: 6px 6px 0 #000;
+      border-color: var(--pink);
+      background: #26094f;
     }
+
+    .btn.primary {
+      color: #07010f;
+      background: var(--cyan);
+      border-color: var(--ink);
+      text-shadow: none;
+    }
+
+    .btn.primary:hover { background: var(--lime); border-color: var(--yellow); }
+
+    main { padding-top: 24px; }
+    section { scroll-margin-top: 110px; }
 
     .hero {
-      padding: 96px 0 70px;
-      position: relative;
-    }
-
-    .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 34px;
+      grid-template-columns: minmax(0,1.05fr) minmax(330px,.95fr);
+      gap: 22px;
+      align-items: stretch;
+      padding: 54px 0 34px;
+      min-height: calc(100vh - 112px);
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(56, 248, 212, 0.16);
-      background: rgba(56, 248, 212, 0.08);
-      color: var(--cyan);
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
-
-    .glitch {
-      font-size: 62px;
-      line-height: 1.02;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
-      text-shadow: 0 0 25px rgba(56, 248, 212, 0.12);
-    }
-
-    .glitch span {
-      color: var(--cyan);
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 700px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
+    .hero-copy {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .chip-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .chip {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(86, 182, 255, 0.14);
-      color: #ccefff;
-      font-size: 13px;
-    }
-
-    .hero-visual {
-      background: linear-gradient(180deg, rgba(13, 24, 38, 0.9), rgba(6, 10, 18, 0.95));
-      border: 1px solid rgba(56, 248, 212, 0.12);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: var(--shadow);
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(22px, 4vw, 42px);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-visual::before {
+    .hero-copy::before,
+    .hero-copy::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(56, 248, 212, 0.08), transparent 45%, rgba(86, 182, 255, 0.05));
-      pointer-events: none;
+      width: 90px;
+      height: 90px;
+      background:
+        linear-gradient(90deg, transparent 46%, rgba(255,255,255,.25) 47%, rgba(255,255,255,.25) 53%, transparent 54%),
+        linear-gradient(0deg, transparent 46%, rgba(255,255,255,.25) 47%, rgba(255,255,255,.25) 53%, transparent 54%),
+        rgba(255,79,216,.18);
+      image-rendering: pixelated;
     }
 
-    .terminal-bar {
+    .hero-copy::before { right: 22px; top: 22px; }
+    .hero-copy::after { left: 28px; bottom: 26px; background-color: rgba(34,247,255,.13); }
+
+    .kicker {
+      display: inline-flex;
+      width: fit-content;
+      gap: 8px;
+      align-items: center;
+      color: var(--lime);
+      background: rgba(168,255,62,.08);
+      border: 2px solid rgba(168,255,62,.45);
+      padding: 8px 10px;
+      box-shadow: 4px 4px 0 #000;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: .07em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--lime);
+      box-shadow: 0 0 16px var(--lime);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      margin: 24px 0 18px;
+      max-width: 11ch;
+      font-size: clamp(2.7rem, 7vw, 6.8rem);
+      line-height: .86;
+      letter-spacing: -.09em;
+      text-transform: uppercase;
+      text-shadow:
+        4px 4px 0 #000,
+        7px 0 0 rgba(255,79,216,.55),
+        -5px 0 0 rgba(34,247,255,.40);
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 66ch;
+      color: #d8d1ea;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .stats {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      padding: 16px;
+      border: 2px solid rgba(255,255,255,.20);
+      background: rgba(0,0,0,.22);
+      box-shadow: 4px 4px 0 #000;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 1.7rem;
+      line-height: 1;
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .window {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    .window-bar {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+      border-bottom: 2px solid rgba(255,255,255,.18);
+      background: #230a45;
     }
 
-    .terminal-bar span {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.25);
+    .dots { display: flex; gap: 7px; }
+    .dot {
+      width: 13px;
+      height: 13px;
+      border: 2px solid #000;
+      box-shadow: 2px 2px 0 #000;
     }
+    .dot:nth-child(1){ background: var(--red); }
+    .dot:nth-child(2){ background: var(--yellow); }
+    .dot:nth-child(3){ background: var(--lime); }
 
-    .logo-panel {
-  border-radius: 22px;
-  background: #000;
-  padding: 12px;
-  border: 1px solid rgba(56, 248, 212, 0.18);
-  box-shadow: 0 0 30px rgba(56, 248, 212, 0.10);
-  margin-bottom: 18px;
-}
-
-.logo-panel img {
-  width: 100%;
-  max-width: 540px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 14px;
-}
-
-    .scan-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .scan-card,
-    .card,
-    .member-card,
-    .contact-box,
-    .about-box {
-      background: var(--panel);
-      border: 1px solid rgba(56, 248, 212, 0.11);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .scan-card {
-      padding: 16px;
-    }
-
-    .scan-card small,
-    .section-head small {
-      display: inline-block;
+    .window-title {
       color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 2.4px;
-      font-size: 11px;
-      margin-bottom: 8px;
     }
 
-    .scan-card strong {
+    .console {
+      flex: 1;
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      background:
+        linear-gradient(rgba(255,255,255,.035) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 2px, transparent 2px),
+        rgba(5,1,16,.88);
+      background-size: 18px 18px;
+    }
+
+    .cmd {
+      border: 2px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.30);
+      padding: 14px;
+      box-shadow: 4px 4px 0 #000;
+    }
+
+    .cmd b {
+      color: var(--lime);
       display: block;
-      font-size: 18px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
     }
 
-    .scan-card p {
+    .cmd p {
       color: var(--muted);
-      font-size: 14px;
+      line-height: 1.65;
+      margin: 0;
+      font-size: 13px;
     }
 
-    section {
-      padding: 78px 0;
+    .cmd .line {
+      color: var(--cyan);
+      font-size: 13px;
+      line-height: 1.8;
     }
 
-    section[id] {
-      scroll-margin-top: 92px;
+    .ticker {
+      border-block: 2px solid rgba(255,255,255,.22);
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan), var(--lime));
+      color: #05020b;
+      overflow: hidden;
+      box-shadow: 0 5px 0 #000, 0 -5px 0 #000;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tick 28s linear infinite;
+    }
+
+    .ticker span {
+      padding: 12px 22px;
+      font-size: 12px;
+      font-weight: 1000;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @keyframes tick {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section {
+      padding: 84px 0;
     }
 
     .section-head {
-      max-width: 780px;
-      margin: 0 auto 36px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: minmax(0,.9fr) minmax(280px,.72fr);
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 24px;
     }
 
-    .section-head h2 {
-      font-size: 40px;
-      margin-bottom: 12px;
+    .section-tag {
+      color: var(--cyan);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .section h2 {
+      margin: 12px 0 0;
+      font-size: clamp(2rem, 4.8vw, 4.2rem);
+      line-height: .92;
+      letter-spacing: -.07em;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 0 #000;
     }
 
     .section-head p {
       color: var(--muted);
-      font-size: 16px;
       line-height: 1.75;
+      margin: 0;
     }
 
-    .about-grid,
-.service-grid,
-.project-grid,
-.team-grid,
-.contact-grid {
-  display: grid;
-  gap: 22px;
-}
-
-.about-grid {
-  grid-template-columns: 1.15fr 0.85fr;
-}
-
-.service-grid,
-.project-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.team-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: stretch;
-}
-
-.contact-grid {
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: stretch;
-}
-    .about-box,
-    .card,
-    .member-card,
-    .contact-box {
-      padding: 26px;
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
     }
 
-    .about-box h3,
-    .card h3,
-    .member-card h3,
-    .contact-box h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
+    .big-panel {
+      padding: clamp(20px,4vw,34px);
+      min-height: 430px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .about-box p,
-    .card p,
-    .member-card p,
-    .contact-box p {
-      color: var(--muted);
-      line-height: 1.75;
+    .big-panel::after {
+      content: "BUILD";
+      position: absolute;
+      right: -18px;
+      bottom: 6px;
+      color: rgba(255,255,255,.045);
+      font-size: clamp(5rem,15vw,12rem);
+      font-weight: 1000;
+      letter-spacing: -.1em;
+      line-height: .8;
     }
 
-    .list {
+    .big-panel h3 {
+      max-width: 15ch;
+      color: var(--yellow);
+      font-size: clamp(1.8rem,3.6vw,3.2rem);
+      line-height: .96;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 0 #000;
+    }
+
+    .big-panel p {
+      position: relative;
+      z-index: 1;
+      color: #d8d1ea;
+      line-height: 1.85;
+      max-width: 72ch;
+    }
+
+    .proof-list {
+      position: relative;
+      z-index: 1;
       display: grid;
       gap: 12px;
-      margin-top: 18px;
+      margin-top: 22px;
     }
 
-    .list li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      color: #dffbff;
+    .proof-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px;
+      border: 2px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.20);
+      box-shadow: 4px 4px 0 #000;
     }
 
-    .list li::before {
-      content: ">";
-      color: var(--green);
-      font-weight: bold;
-    }
-
-    .card:hover,
-    .member-card:hover,
-    .about-box:hover,
-    .contact-box:hover {
-      transform: translateY(-4px);
-      transition: 0.25s ease;
-      border-color: rgba(56, 248, 212, 0.22);
-    }
-
-    .icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
+    .proof-row strong {
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(56, 248, 212, 0.16), rgba(86, 182, 255, 0.12));
-      border: 1px solid rgba(56, 248, 212, 0.14);
-      color: var(--cyan);
-      font-size: 23px;
-      margin-bottom: 16px;
+      width: 44px;
+      height: 44px;
+      background: var(--pink);
+      color: #05020b;
+      box-shadow: 3px 3px 0 #000;
+      font-size: 14px;
     }
 
-    .member-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 18px;
-  margin-bottom: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(56, 248, 212, 0.20);
-  background: rgba(255,255,255,0.03);
-  box-shadow: 0 0 20px rgba(56, 248, 212, 0.08);
-}
-
-.member-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-    .member-role {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(56, 248, 212, 0.08);
-      border: 1px solid rgba(56, 248, 212, 0.14);
-      color: var(--cyan);
-      font-size: 12px;
+    .proof-row b {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
       text-transform: uppercase;
-      letter-spacing: 1.8px;
     }
 
-    .member-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .member-meta span {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.05);
-      color: #d7e7f4;
-      font-size: 12px;
-    }
-
-    .notice {
-      margin-top: 12px;
-      color: var(--cyan);
+    .proof-row span {
+      color: var(--muted);
+      line-height: 1.55;
       font-size: 13px;
     }
 
-    #team .member-card {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
+    .side-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .side-card {
       padding: 20px;
-      height: 100%;
+      min-height: 206px;
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
     }
 
-    #team .member-photo {
-      aspect-ratio: 4 / 3;
-      margin-bottom: 14px;
+    .side-card:hover,
+    .project-card:hover,
+    .skill-card:hover,
+    .member-card:hover,
+    .process-card:hover,
+    .contact-card:hover {
+      transform: translate(-3px,-3px);
+      box-shadow: 11px 11px 0 #000;
+      border-color: var(--cyan);
     }
 
-    #team .member-card h3 {
-      font-size: 20px;
-      line-height: 1.25;
+    .side-card h3,
+    .skill-card h3,
+    .member-card h3,
+    .process-card h3,
+    .contact-card h3 {
+      margin: 10px 0 10px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      text-shadow: 3px 3px 0 #000;
     }
 
-    #team .member-card p {
-      font-size: 14px;
-      line-height: 1.6;
-      flex: 1;
+    .side-card p,
+    .skill-card p,
+    .member-card p,
+    .process-card p,
+    .contact-card p,
+    .project-card p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+      font-size: 13px;
     }
 
-    #team .member-role {
-      font-size: 11px;
-      padding: 6px 10px;
-      letter-spacing: 1.2px;
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 18px;
     }
 
-    #team .member-meta {
-      gap: 8px;
+    .filter-btn {
+      min-height: 40px;
+      padding: 0 12px;
+      border: 2px solid rgba(255,255,255,.24);
+      background: #15072f;
+      color: var(--muted);
+      box-shadow: 4px 4px 0 #000;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
-    #team .member-meta span {
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: #05020b;
+      background: var(--lime);
+      border-color: var(--ink);
+      transform: translate(-2px,-2px);
+      box-shadow: 6px 6px 0 #000;
+    }
+
+    .project-grid,
+    .skill-grid,
+    .team-grid,
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      min-height: 294px;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(34,247,255,.12), transparent 36%),
+        radial-gradient(circle at 90% 90%, rgba(255,79,216,.15), transparent 34%);
+      pointer-events: none;
+    }
+
+    .project-card > * { position: relative; z-index: 1; }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .num {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      background: var(--cyan);
+      color: #05020b;
+      border: 2px solid #fff;
+      box-shadow: 3px 3px 0 #000;
+      font-weight: 1000;
+    }
+
+    .type {
+      color: var(--pink);
+      border: 2px solid rgba(255,79,216,.45);
+      background: rgba(255,79,216,.08);
       padding: 7px 9px;
       font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
-
-    .contact-wrap {
-      padding: 30px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, rgba(56, 248, 212, 0.08), rgba(86, 182, 255, 0.06), rgba(211, 124, 255, 0.06));
-      border: 1px solid rgba(56, 248, 212, 0.14);
-      box-shadow: var(--shadow);
-      height: 100%;
+    .project-card h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.22rem;
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+      text-shadow: 3px 3px 0 #000;
     }
 
-    .contact-wrap h2 {
-      font-size: 42px;
-      margin-bottom: 14px;
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
     }
 
-    .contact-wrap p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 22px;
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 8px;
+      border: 2px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.22);
+      color: #eae2ff;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
-    .footer {
-      border-top: 1px solid rgba(56, 248, 212, 0.08);
-      padding: 28px 0 40px;
-      text-align: center;
-      color: #6c8392;
-      font-size: 14px;
+    .card-link {
+      width: fit-content;
+      margin-top: auto;
+      color: #05020b;
+      background: var(--yellow);
+      border: 2px solid #fff;
+      box-shadow: 4px 4px 0 #000;
+      padding: 10px 11px;
+      font-size: 12px;
+      font-weight: 1000;
+      text-transform: uppercase;
     }
 
-    .link-list {
+    .card-link:hover {
+      background: var(--cyan);
+      transform: translate(-2px,-2px);
+      box-shadow: 6px 6px 0 #000;
+    }
+
+    .skill-card,
+    .member-card,
+    .process-card,
+    .contact-card {
+      padding: 20px;
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+    }
+
+    .skill-card {
+      min-height: 232px;
+    }
+
+    .label {
+      display: inline-flex;
+      width: fit-content;
+      color: #05020b;
+      background: var(--lime);
+      border: 2px solid #fff;
+      box-shadow: 3px 3px 0 #000;
+      padding: 6px 8px;
+      font-size: 11px;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .member-card.feature {
+      grid-column: 1 / -1;
       display: grid;
-      gap: 10px;
-      margin-top: 6px;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
     }
 
-    .link-list a {
+    .member-head {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #fff;
+      background:
+        linear-gradient(90deg, transparent 47%, rgba(255,255,255,.18) 48%, transparent 53%),
+        linear-gradient(0deg, transparent 47%, rgba(255,255,255,.18) 48%, transparent 53%),
+        var(--purple);
+      color: #fff;
+      box-shadow: 5px 5px 0 #000;
+      font-weight: 1000;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .member-meta small {
       display: block;
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(56, 248, 212, 0.11);
-      color: #dffbff;
-      transition: 0.25s ease;
-    }
-
-    .link-list a:hover {
       color: var(--cyan);
-      border-color: rgba(56, 248, 212, 0.22);
-      transform: translateY(-2px);
+      margin-bottom: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 1000;
+      letter-spacing: .08em;
     }
 
-   @media (max-width: 1060px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid,
-  .service-grid,
-  .project-grid,
-  .team-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+    .member-meta h3 {
+      margin: 0;
+      color: var(--yellow);
+      font-size: 1.45rem;
+    }
 
-  .glitch {
-    font-size: 50px;
-  }
+    .role {
+      display: inline-flex;
+      width: fit-content;
+      color: #05020b;
+      background: var(--pink);
+      border: 2px solid #fff;
+      box-shadow: 3px 3px 0 #000;
+      padding: 7px 9px;
+      font-size: 11px;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
 
-  .nav-links {
-    display: none;
-  }
+    .member-body {
+      display: grid;
+      gap: 13px;
+    }
 
-  .nav-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 9px;
+    }
 
-  .nav-links {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 10px);
-    padding: 14px;
-    width: min(320px, 92vw);
-    border-radius: 18px;
-    background: rgba(5, 7, 13, 0.92);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(56, 248, 212, 0.12);
-    box-shadow: var(--shadow);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    z-index: 1001;
-  }
+    .list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 9px;
+      color: #d8d1ea;
+      font-size: 13px;
+      line-height: 1.5;
+    }
 
-  .nav-links a {
-    padding: 10px 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
-    background: rgba(255,255,255,0.03);
-  }
+    .list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-top: 5px;
+      background: var(--cyan);
+      box-shadow: 2px 2px 0 #000;
+    }
 
-  .nav-links.is-open {
-    display: flex;
-  }
-}
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
 
-    @media (max-width: 760px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid,
-  .service-grid,
-  .project-grid,
-  .team-grid,
-  .scan-box {
-    grid-template-columns: 1fr;
-  }
+    .process-card {
+      min-height: 190px;
+      position: relative;
+    }
 
-  .hero {
-    padding-top: 72px;
-  }
+    .process-card::after {
+      content: attr(data-step);
+      position: absolute;
+      right: 12px;
+      bottom: 4px;
+      color: rgba(255,255,255,.06);
+      font-size: 4rem;
+      font-weight: 1000;
+      letter-spacing: -.1em;
+    }
 
-  .glitch {
-    font-size: 36px;
-  }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
 
-  .section-head h2,
-  .contact-wrap h2 {
-    font-size: 29px;
-  }
+    footer.wrap {
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 34px 0 44px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
 
-  .brand strong {
-    font-size: 18px;
-  }
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
 
-  .btn {
-    width: 100%;
-  }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  .hero-actions {
-    flex-direction: column;
-  }
+    @media (max-width: 1080px) {
+      .hero,
+      .proof-grid,
+      .section-head,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .nav-links {
-    width: min(360px, 92vw);
-  }
-}
-    
+      .hero {
+        min-height: auto;
+      }
+
+      .project-grid,
+      .skill-grid,
+      .process-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+
+      .nav {
+        grid-template-columns: auto auto;
+      }
+
+      .nav-links {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        display: none;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      .nav-actions .btn:not(.menu-btn) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wrap { width: min(calc(100% - 18px), var(--max)); }
+      .topbar { top: 8px; margin-top: 8px; }
+      .nav { padding: 9px; gap: 10px; }
+      .brand-badge { width: 36px; height: 36px; }
+      .brand { font-size: 14px; }
+      .brand small { font-size: 9px; }
+      main { padding-top: 10px; }
+      .hero { padding-top: 28px; gap: 16px; }
+      .hero-copy, .console, .big-panel, .skill-card, .member-card, .process-card, .contact-card { padding: 16px; }
+      .hero h1 { font-size: clamp(2.4rem, 16vw, 4.2rem); }
+      .hero p { font-size: .94rem; }
+      .stats,
+      .project-grid,
+      .skill-grid,
+      .team-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .member-card.feature {
+        grid-template-columns: 1fr;
+      }
+      .section { padding: 64px 0; }
+      .section h2 { font-size: clamp(2rem, 12vw, 3.5rem); }
+      .filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
+      .filter-btn { flex: 0 0 auto; }
+      .pixel { box-shadow: 5px 5px 0 #000; }
+      .project-card { min-height: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#home">Skip to content</a>
-  <!-- Image files are loaded from the ing/ folder. -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <div class="brand-badge">
-          <img src="img/logo5.png" alt="NotFound_404 logo" />
-        </div>
-        <div>
-          <small>cyber crew</small>
-          <strong>NotFound_404</strong>
-        </div>
+  <header class="topbar wrap">
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-badge">404</span>
+        <span><span id="brandName">NOtFound_404</span><small>retro-grade builder team</small></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
-        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      </button>
-
-      <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About us</a>
-        <a href="#services">What we do</a>
-        <a href="#projects">Projects</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Start</a>
+        <a class="nav-link" href="#proof">Proof</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
-
-      <a href="#team" class="btn btn-primary">Contact the Team</a>
+      <div class="nav-actions">
+        <a class="btn" href="https://github.com/BeBecpp/NOtFound_404-Web" target="_blank" rel="noopener noreferrer">Source</a>
+        <a class="btn primary" href="#projects">Work</a>
+        <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks">==</button>
+      </div>
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">[ ONLINE ] FRONT-END / CYBER / CTF / AI / DATA / GAME DEV</div>
-        <h1 class="glitch">NotFound_404 <span>Mongolian Junior Developer Team</span></h1>
+  <main>
+    <section class="hero wrap" id="home">
+      <article class="hero-copy pixel reveal">
+        <span class="kicker">Mongolia // AI // Full-stack // Security</span>
+        <h1>Retro systems. Real products.</h1>
         <p>
-          NotFound_404 is a Mongolian junior team working across front-end development, cybersecurity, CTF, AI engineering,
-          data analytics, and game development. This site is a reflection of our identity, style, and the kind of work we want to do. We are passionate about learning fast, building real projects, and growing as engineers together.
+          We are a small builder team turning technical curiosity into products people can open, test, and understand.
+          Our roots are in CTF and security, but the work is broader now: AI workflows, full-stack prototypes,
+          premium web experiences, data experiments, and defensive tools with clear purpose.
         </p>
-
         <div class="hero-actions">
-          <a href="#services" class="btn btn-primary">What We Do</a>
-          <a href="#contact" class="btn btn-secondary">Contact / Social</a>
+          <a class="btn primary" href="#projects">Enter projects</a>
+          <a class="btn" href="#team">Meet crew</a>
         </div>
-
-        <div class="chip-wrap">
-          <span class="chip">Front-end Engineering</span>
-          <span class="chip">Cybersecurity</span>
-          <span class="chip">CTF Participation</span>
-          <span class="chip">AI Engineering</span>
-          <span class="chip">Data Analytics</span>
-          <span class="chip">Game Development</span>
-          <span class="chip">Arduino</span>
-          <span class="chip">Back-End Engineering</span>
-          <span class="chip">Python Engineering</span>
-          <span class="chip">C++ Engineering</span>
-          <span class="chip">Mobile Development</span>
+        <div class="stats">
+          <div class="stat"><strong>20+</strong><span>selected builds and project directions</span></div>
+          <div class="stat"><strong>3</strong><span>core members with focused roles</span></div>
+          <div class="stat"><strong>0</strong><span>fake logo assets; rename-ready brand</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="hero-visual">
-        <div class="terminal-bar">
-          <span></span><span></span><span></span>
+      <aside class="window pixel reveal" aria-label="Team operating terminal">
+        <div class="window-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span class="window-title">team_os.exe</span>
         </div>
-
-        <div class="logo-panel">
-          <img src="img/logo5.png" alt="NotFound_404 main logo" />
+        <div class="console">
+          <div class="cmd">
+            <b>boot sequence</b>
+            <p class="line">$ load identity --mode builder-team</p>
+            <p class="line">$ disable generic-ctf-only-profile</p>
+            <p class="line">$ enable ai + fullstack + defensive-security</p>
+          </div>
+          <div class="cmd">
+            <b>mission</b>
+            <p>Build products that prove skill fast: useful interfaces, working logic, clear reports, strong project stories, and ethical security practice.</p>
+          </div>
+          <div class="cmd">
+            <b>signal</b>
+            <div class="chips">
+              <span class="chip">AI engineer</span><span class="chip">Full stack</span><span class="chip">Cybersecurity</span><span class="chip">CTF</span><span class="chip">UI systems</span><span class="chip">Demos</span>
+            </div>
+          </div>
         </div>
+      </aside>
+    </section>
 
-        <div class="scan-box">
-          <div class="scan-card">
-  <small>team</small>
-  <strong>Young Minds, Big Vision</strong>
-  <p>A passionate student team exploring technology through creativity, teamwork, and the drive to build meaningful digital solutions.</p>
-</div>
-
-<div class="scan-card">
-  <small>mission</small>
-  <strong>Learn, Build, Evolve</strong>
-  <p>We grow by creating projects, solving challenges, and pushing ourselves to become the next generation of engineers and innovators.</p>
-</div>
-        </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>AI systems that teach, investigate, and assist</span>
+        <span>Full-stack demos with real flows</span>
+        <span>Defensive security and legal CTF practice</span>
+        <span>Pixel-era energy, modern responsive layout</span>
+        <span>Project proof over empty claims</span>
+        <span>AI systems that teach, investigate, and assist</span>
+        <span>Full-stack demos with real flows</span>
+        <span>Defensive security and legal CTF practice</span>
+        <span>Pixel-era energy, modern responsive layout</span>
+        <span>Project proof over empty claims</span>
       </div>
     </div>
-  </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <small>About the Crew</small>
-        <h2>We build at the intersection of code, security, AI, and data.</h2>
+    <section class="section wrap" id="proof">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Proof-first identity</span>
+          <h2>Not a generic crew page.</h2>
+        </div>
         <p>
-          We are a multidisciplinary team passionate about crafting modern digital experiences, solving complex security challenges, and building intelligent systems powered by data. From sleek front-end interfaces to cybersecurity research, automation, analytics, and interactive products, we turn ideas into practical and impactful solutions.
+          The site is built around evidence: project depth, technical taste, security discipline, and a team story that feels credible without pretending to be something it is not.
         </p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-box">
-          <h3>Who is NotFound_404?</h3>
+      <div class="proof-grid">
+        <article class="big-panel pixel reveal">
+          <h3>The team has outgrown a single label.</h3>
           <p>
-            NotFound_404 is a small but driven team focused on building smart, secure, and visually refined digital products. Our work blends modern web development, cybersecurity, AI engineering, data analytics, and interactive design.
-We value speed, clarity, and purposeful execution—building systems that are not only functional, but meaningful and memorable.
+            CTF still matters, but it is not the full identity. The stronger story is a builder team that combines AI engineering,
+            full-stack product work, frontend craft, data experiments, and defensive cybersecurity. That gives the team more range,
+            more credibility, and a cleaner direction for future projects.
           </p>
-          <ul class="list">
-            <li>Strong focus on front-end quality, UI, and user interaction</li>
-            <li>Security-minded thinking shaped by CTF and real-world practice</li>
-            <li>Practical AI and data solutions with clear business value</li>
-            <li>Creative, collaborative, and always ready to experiment</li>
-          </ul>
-        </div>
-
-        <div class="about-box">
-          <h3>Quick Stack</h3>
-          <ul class="list">
-            <li>HTML / CSS / JavaScript / React</li>
-            <li>Cybersecurity / CTF / OSINT / Web Security</li>
-            <li>AI Engineering / Prompt / Automation</li>
-            <li>Data Analytics / Dashboard / Visualization</li>
-            <li>Game Logic / UI / Prototype / Interactive</li>
-          </ul>
-          <p class="notice">We also work across branding, research-driven experimentation, and digital product design to create experiences that feel sharp, modern, and technically solid.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <small>What We Do</small>
-        <h2>Core areas we focus on</h2>
-        <p>We design and build digital experiences that combine usability, performance, security, and innovation. Our work spans modern interfaces, secure systems, intelligent automation, data-driven solutions, and interactive product development.</p>
-      </div>
-
-      <div class="service-grid">
-        <div class="card">
-          <div class="icon">⌘</div>
-          <h3>Front-end Engineering</h3>
-          <p>We build responsive websites, dashboards, admin systems, and interactive interfaces with a strong focus on performance, usability, and clean user experience.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🛡</div>
-          <h3>Cybersecurity</h3>
-          <p>We approach products with a security-first mindset, covering web security fundamentals, secure system design, vulnerability awareness, and practical defensive thinking.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">⚑</div>
-          <h3>CTF</h3>
-          <p>We grow through Capture The Flag challenges that sharpen our problem-solving skills across web, reverse engineering, crypto, forensics, and exploitation concepts.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>AI Engineering</h3>
-          <p>We create AI-powered workflows, prompt systems, automation tools, assistant experiences, and practical integrations that improve productivity and product value.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>Data Analytics</h3>
-          <p>We turn raw data into useful insights through cleanup, reporting pipelines, KPI tracking, dashboards, and visualizations that support better decisions.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🎮</div>
-          <h3>Game Development</h3>
-          <p>We explore gameplay systems, UI prototypes, interaction design, and experimental mechanics to create engaging and playful digital experiences.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="projects">
-  <div class="container">
-    <div class="section-head">
-      <small>Our Projects</small>
-      <h2>Things we have built and explored</h2>
-      <p>
-        Here are some of the projects, experiments, and practical systems we have worked on across web development,
-        cybersecurity, automation, AI, and interactive product design.
-      </p>
-    </div>
-
-    <div class="project-grid">
-      <div class="card">
-        <div class="icon">🌐</div>
-        <h3>Team Portfolio Website</h3>
-        <p>
-          A modern cyber-style portfolio website created to represent our team identity, technical interests,
-          and digital presence. Built with responsive layout principles, custom branding, and a neon-inspired UI style.
-        </p>
-        <div class="member-meta">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>Responsive UI</span>
-          <span>Branding</span>
-        </div>
-      </div>
-
-      <div class="card">
-  <div class="icon">🤖</div>
-  <h3>
-    <a href="https://github.com/BeBecpp/CNN-Image-Classification" target="_blank" rel="noopener noreferrer">
-      CNN Image Classification
-    </a>
-  </h3>
-  <p>
-    A PyTorch-based computer vision project that classifies Mongolian vehicle license plate images by predicting whether a plate contains 6 or 7 characters. It covers image preprocessing, CNN training, evaluation, and test prediction.
-  </p>
-  <div class="member-meta">
-    <span>Python</span>
-    <span>PyTorch</span>
-    <span>CNN</span>
-    <span>Computer Vision</span>
-    <span>Image Classification</span>
-  </div>
-
-  <div style="margin-top: 18px;">
-    <a
-      href="https://github.com/BeBecpp/CNN-Image-Classification"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-secondary"
-      style="width: 100%;"
-    >
-      View Project on GitHub
-    </a>
-  </div>
-</div>
-
-     <div class="card">
-  <div class="icon">🛡️</div>
-  <h3>
-    <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener noreferrer">
-      CTF & Security Practice
-    </a>
-  </h3>
-  <p>
-    We actively strengthen our cybersecurity skills through CTF competitions, web security practice,
-    cryptography challenges, forensics, and hands-on problem solving. One of our notable achievements
-    was earning 40th place at Stranger's CTF - Techtrix '26.
-  </p>
-
-  <div class="member-meta">
-    <span>CTF</span>
-    <span>Web Security</span>
-    <span>Crypto</span>
-    <span>Forensics</span>
-  </div>
-
-  <div style="margin-top: 18px;">
-    <a
-      href="https://ctftime.org/team/429017"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-secondary"
-      style="width: 100%;"
-    >
-      View Team on CTFtime
-    </a>
-  </div>
-</div>
-
-      <div class="card">
-        <div class="icon">💬</div>
-        <h3>
-          <a href="https://github.com/BeBecpp/AI_Assistant_Chatbot" target="_blank" rel="noopener noreferrer">
-            AI Assistant Chatbot
-          </a>
-        </h3>
-        <p>
-          A Flask-based AI chatbot built for myguide.ubcircus.com. It includes a clean black-and-white draggable popup chat UI,
-          a JSON API, environment-based configuration, error handling, and a Lite NLP fallback so the demo can still work even
-          without a production AI API key.
-        </p>
-        <div class="member-meta">
-          <span>Python</span>
-          <span>Flask</span>
-          <span>Chatbot</span>
-          <span>Lite NLP</span>
-          <span>Gemini / OpenAI</span>
-        </div>
-
-        <div style="margin-top: 18px;">
-          <a
-            href="https://github.com/BeBecpp/AI_Assistant_Chatbot"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-secondary"
-            style="width: 100%;"
-          >
-            View Project on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="icon">🕹️</div>
-        <h3>
-          <a href="https://github.com/FluxKnight/Runner_void" target="_blank" rel="noopener noreferrer">
-            Runner Void
-          </a>
-        </h3>
-        <p>
-          A creative game-development repository prepared for a fast-paced runner concept. The project can grow into an
-          experimental prototype focused on movement, obstacle logic, level flow, responsive controls, and a dark cyber-style
-          gameplay experience.
-        </p>
-        <div class="member-meta">
-          <span>Game Dev</span>
-          <span>Runner</span>
-          <span>Prototype</span>
-          <span>Gameplay Logic</span>
-          <span>UI / UX</span>
-        </div>
-
-        <div style="margin-top: 18px;">
-          <a
-            href="https://github.com/FluxKnight/Runner_void"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-secondary"
-            style="width: 100%;"
-          >
-            View Project on GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="team">
-  <div class="container">
-    <div class="section-head">
-      <small>Team Members</small>
-      <h2>Meet the people behind NotFound_404</h2>
-      <p>
-        A small team with a shared passion for building secure, modern, and meaningful digital experiences.
-        Each member brings a unique mix of technical skill, creative thinking, and problem-solving energy
-        to the projects we build.
-      </p>
-    </div>
-
-    <div class="team-grid">
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="img/bebe.jpeg" alt="Bayarbayasgalan Enkhtulga" />
-</div>
-        <span class="member-role">Nero_404 (leader)</span>
-
-        <h3>Bayarbayasgalan Enkhtulga</h3>
-        <p>
-          Bayarbayasgalan Enkhtulga is an AI engineer focused on building practical, intelligent systems
-          that solve real-world problems. He works on AI-powered workflows, prompt design, automation,
-          and data-driven solutions that improve productivity and user experience. His approach combines
-          technical precision with experimentation, allowing him to turn complex ideas into usable products
-          and tools.
-        </p>
-        <div class="member-meta">
-          <span>AI engineer</span>
-          <span>Arduino Engineer</span>
-          <span>Python Engineer</span>
-          <span>CTF team leader</span>
-          <span>Cybersecurity</span>
-          <span>Data Analytics</span>
-          <span>Cryptography</span>
-          <span>OSINT</span>
-          <span>C++ Engineer</span>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="img/xvslen.jpg" alt="Khuslen Ganbat" />
-</div>
-        <span class="member-role">Phantom_404</span>
-        <h3>Khuslen Ganbat</h3>
-        <p>
-          Hello, my name is Khuslen. I study in the 9th grade. I am passionate about modern technology
-          and cybersecurity. I enjoy learning new things in these fields. In the future, I want to become
-          a cybersecurity expert and work to protect people and create a safer digital world.
-        </p>
-        <div class="member-meta">
-          <span>Cybersecurity</span>
-          <span>CTF</span>
-          <span>Web Security</span>
-          <span>Problem Solving</span>
-          <span>Python Engineer</span>
-          <span>C++ Engineer</span>
-          <span>Designer</span>
-          <span>UI / UX</span>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="img/bayar.jpg" alt="Tsogterdene Margaderdene" />
-</div>
-        <span class="member-role">Bloxer_404</span>
-        <h3>Tsogterdene Margaderdene</h3>
-        <p>
-          Tsogterdene is interested in AI engineering, automation, data analysis, and practical technical
-          workflows. He enjoys exploring new tools, building useful systems, and improving how ideas are
-          transformed into real digital products.
-        </p>
-        <div class="member-meta">
-          <span>AI Engineering</span>
-          <span>Data Analytics</span>
-          <span>Automation</span>
-          <span>Forensics</span>
-          <span>C++ Engineer</span>
-          <span>Python Engineer</span>
-        </div>
-      </div>
-
-      
-
-      <div class="member-card">
-        <div class="member-photo">
-  <img src="img/bagsh.jpg" alt="Dashtseren Altanzul" />
-</div>
-        <span class="member-role">Teacher / Mentor</span>
-        <h3>Dashtseren Altanzul</h3>
-        <p>
-          As an Information Technology teacher, I encourage my students to innovate, create, and develop strong problem-solving skills. Every student who dreams of becoming an engineer should remain dedicated to learning and continue expanding their knowledge of technology. Every small step taken today is the foundation of tomorrow’s great success. I firmly believe that the outstanding engineers of the future will rise from this generation.
-        </p>
-        <div class="member-meta">
-          <span>Mentor</span>
-          <span>Teacher</span>
-          <span>Guidance</span>
-          <span>Project Support</span>
-          <span>C++ Engineer</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="contact">
-    <div class="container contact-grid">
-      <div class="contact-wrap">
-        <small style="display:inline-block; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Contact / Links</small>
-        <h2>Let’s connect and build something meaningful</h2>
-        <p>
-          Whether it’s collaboration, freelance work, creative ideas, technical discussions, or team opportunities, we’re always open to connecting with people who share the same passion for technology, security, AI, and digital innovation.
-        </p>
-        <div class="hero-actions" style="margin-bottom: 0;">
-          <a href="mailto:hello@notfound404.dev" class="btn btn-primary">Email Us</a>
-          <a href="#home" class="btn btn-secondary">Back to Top</a>
-        </div>
-      </div>
-
-      <div style="display:grid; gap:22px;">
-        <div class="contact-box">
-          <h3>Email</h3>
-          <p>pynotix.py@gmail.com</p>
-        </div>
-        <div class="contact-box">
-          <h3>GitHub</h3>
-          <p><a href="https://github.com/bebecpp" target="_blank" rel="noopener noreferrer">github.com/bebecpp</a></p>
-        </div>
-        <div class="contact-box">
-          <h3>Social / CTF / Portfolio</h3>
-          <div class="link-list">
-            <a href="https://discord.com/bebecringe" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="https://t.me/bebecringe" target="_blank" rel="noopener noreferrer">Telegram</a>
-            <a href="https://ctftime.org/team/429017" target="_blank" rel="noopener noreferrer">CTFTime</a>
-            <a href="https://www.linkedin.com/in/bayarbayasgalan-enkhtulga-2219a13b9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://notfound404ctf.blogspot.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <div class="proof-list">
+            <div class="proof-row"><strong>01</strong><div><b>AI that does work</b><span>Tutors, assistants, proof engines, dashboards, incident workflows, and structured outputs.</span></div></div>
+            <div class="proof-row"><strong>02</strong><div><b>Interfaces with character</b><span>Responsive pages, motion, pixel-era styling, clean hierarchy, and product-grade polish.</span></div></div>
+            <div class="proof-row"><strong>03</strong><div><b>Security without cringe</b><span>Ethical CTF, defensive tooling, analysis workflows, safer recommendations, and clear reports.</span></div></div>
+            <div class="proof-row"><strong>04</strong><div><b>Complete small systems</b><span>Idea, UI, logic, README, deployment path, demo flow, and presentation all matter.</span></div></div>
           </div>
-        </div>
-        <div class="contact-box">
-          <h3>Team Links</h3>
-          <div class="link-list">
-            <a href="https://github.com/bebecpp" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-            <a href="mailto:pynotix.py@gmail.com">Email the Team</a>
-            <a href="https://www.facebook.com/profile.php?id=61572243104711" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://nero404.blogspot.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-          </div>
+        </article>
+
+        <div class="side-stack">
+          <article class="side-card pixel reveal">
+            <span class="label">Direction</span>
+            <h3>Builds first. Claims second.</h3>
+            <p>The team page should make someone want to open the projects, not just read buzzwords. Every section points back to proof.</p>
+          </article>
+          <article class="side-card pixel reveal">
+            <span class="label">Style</span>
+            <h3>90s arcade, modern engineering.</h3>
+            <p>The visual language is intentionally loud: pixel borders, CRT texture, hard shadows, terminal windows, and responsive layouts.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container">© 2026 NotFound_404 — Build. Break. Secure. Analyze. Create.</div>
+    <section class="section wrap" id="projects">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Project archive</span>
+          <h2>Selected builds worth showing.</h2>
+        </div>
+        <p>
+          A curated grid from the team ecosystem: AI tools, full-stack prototypes, security utilities, frontend experiments, data projects, and team-oriented builds.
+        </p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Project filters">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="ai">AI</button>
+        <button class="filter-btn" type="button" data-filter="fullstack">Full stack</button>
+        <button class="filter-btn" type="button" data-filter="security">Security</button>
+        <button class="filter-btn" type="button" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" type="button" data-filter="data">Data</button>
+        <button class="filter-btn" type="button" data-filter="game">Game</button>
+        <button class="filter-btn" type="button" data-filter="team">Team</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Skill matrix</span>
+          <h2>What the team can bring.</h2>
+        </div>
+        <p>
+          This skill section is intentionally broader: AI engineering, full-stack delivery, frontend craft, defensive security, CTF practice, and presentation discipline.
+        </p>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card pixel reveal"><span class="label">AI engineer</span><h3>Workflow AI</h3><p>LLM-assisted tools, tutoring flows, structured reports, recommendations, validation-aware outputs, and assistant logic tied to real use cases.</p></article>
+        <article class="skill-card pixel reveal"><span class="label">Full stack</span><h3>Product systems</h3><p>Frontend, backend, APIs, persistence, data handling, deployment flow, and project structure that makes prototypes testable.</p></article>
+        <article class="skill-card pixel reveal"><span class="label">Frontend</span><h3>UI experience</h3><p>Responsive layouts, interaction design, motion, canvas experiments, visual hierarchy, dashboards, and public-facing product pages.</p></article>
+        <article class="skill-card pixel reveal"><span class="label">Backend</span><h3>APIs and logic</h3><p>Python, FastAPI, Flask, SQLite, scoring rules, automation scripts, clean data flow, and practical service design.</p></article>
+        <article class="skill-card pixel reveal"><span class="label">Security</span><h3>Defensive thinking</h3><p>Secure coding awareness, suspicious link analysis, code review concepts, risk scoring, incident-style reports, and safe recommendations.</p></article>
+        <article class="skill-card pixel reveal"><span class="label">CTF</span><h3>Challenge depth</h3><p>Legal CTF practice across web, crypto, forensics, reverse basics, Linux workflow, notes, writeups, and repeatable solving habits.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="team">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Core crew</span>
+          <h2>The people behind the work.</h2>
+        </div>
+        <p>
+          Only the current core members are listed here. The profiles are written to sound like a real team, with clear roles and evidence-based direction.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="member-card feature pixel reveal">
+          <div class="member-head">
+            <div class="avatar">BE</div>
+            <div class="member-meta">
+              <small>BeBe / Nero_404</small>
+              <h3>Bayarbayasgalan Enkhtulga</h3>
+            </div>
+          </div>
+          <div class="member-body">
+            <span class="role">Team Lead / AI Engineer / Full-Stack Developer</span>
+            <p>
+              Bayarbayasgalan drives the team with a project-first mindset: AI systems, defensive security workflows, polished frontend experiences, and demos that can be judged quickly. His strongest work connects useful AI behavior with clean product presentation.
+            </p>
+            <ul class="list">
+              <li>Leads project direction, site presentation, and public-facing build quality.</li>
+              <li>Builds AI tutors, proof engines, dashboards, incident workflows, and gesture-based UI experiments.</li>
+              <li>Focuses on polished interfaces, practical systems, and credible technical storytelling.</li>
+            </ul>
+            <div class="link-row">
+              <a class="card-link" href="https://bebecpp.github.io/my_blog/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+              <a class="card-link" href="https://github.com/BeBecpp" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="member-card pixel reveal">
+          <div class="member-head">
+            <div class="avatar">KH</div>
+            <div class="member-meta">
+              <small>Void / FluxKnight</small>
+              <h3>Khuslen</h3>
+            </div>
+          </div>
+          <div class="member-body">
+            <span class="role">Full-Stack Developer / Cybersecurity Builder</span>
+            <p>
+              Khuslen brings a practical build style shaped by C++, Python, backend APIs, cybersecurity learning, and clean prototypes. He is strongest where software structure and security thinking need to meet.
+            </p>
+            <ul class="list">
+              <li>Works on defensive tools, backend APIs, and useful security-focused prototypes.</li>
+              <li>Builds with a clear loop: understand, prototype, debug, explain.</li>
+              <li>Contributes CTF discipline, documentation habits, and pragmatic engineering.</li>
+            </ul>
+            <div class="link-row">
+              <a class="card-link" href="https://fluxknight.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+              <a class="card-link" href="https://github.com/FluxKnight" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="member-card pixel reveal">
+          <div class="member-head">
+            <div class="avatar">TM</div>
+            <div class="member-meta">
+              <small>Bloxer_404</small>
+              <h3>Tsogterdene Margaderdene</h3>
+            </div>
+          </div>
+          <div class="member-body">
+            <span class="role">Cybersecurity Specialist</span>
+            <p>
+              Tsogterdene is presented as the team's cybersecurity specialist: focused on security fundamentals, safe practice, technical discipline, and team support. This profile is production-ready as a placeholder and easy to personalize later.
+            </p>
+            <ul class="list">
+              <li>Supports CTF practice, Linux workflow, and security learning inside the team.</li>
+              <li>Contributes to analysis, notes, safe testing, and technical review habits.</li>
+              <li>Placeholder copy is intentionally clean so the final profile can be edited later.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="process">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Operating system</span>
+          <h2>How we turn ideas into proof.</h2>
+        </div>
+        <p>
+          The workflow is simple but serious: define the problem, ship a small version, test weak points, polish the experience, and explain the result clearly.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card pixel reveal" data-step="01"><span class="label">Input</span><h3>Define the mission</h3><p>Start with a real user, challenge, or workflow. A project title is not enough; the system needs a reason to exist.</p></article>
+        <article class="process-card pixel reveal" data-step="02"><span class="label">Build</span><h3>Ship the core loop</h3><p>Create the smallest working version that proves the idea: interface, logic, data, output, and a path to demo.</p></article>
+        <article class="process-card pixel reveal" data-step="03"><span class="label">Debug</span><h3>Test the weak parts</h3><p>Look for confusing flows, broken states, security issues, bad copy, weak responsiveness, and missing explanations.</p></article>
+        <article class="process-card pixel reveal" data-step="04"><span class="label">Polish</span><h3>Make it memorable</h3><p>Improve UI, motion, words, project cards, README, screenshots, and the way people understand the work.</p></article>
+        <article class="process-card pixel reveal" data-step="05"><span class="label">Present</span><h3>Turn work into proof</h3><p>Publish the demo, write the story, expose the links, and make the project easy to evaluate.</p></article>
+        <article class="process-card pixel reveal" data-step="06"><span class="label">Repeat</span><h3>Level up the team</h3><p>Use every build to improve engineering taste, security discipline, communication, and delivery speed.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="contact">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag">Contact</span>
+          <h2>Ready for projects, demos, and collaboration.</h2>
+        </div>
+        <p>
+          For hackathons, team opportunities, technical collaboration, or project discussion, use the public links below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card pixel reveal">
+          <span class="label">Direct</span>
+          <h3>Contact the team</h3>
+          <p>Use this while the brand name and logo are still in transition. The website is built to be easy to rename later.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:pynotix.py@gmail.com">pynotix.py@gmail.com</a>
+            <button class="btn" type="button" id="copyEmail">Copy email</button>
+          </div>
+        </article>
+        <article class="contact-card pixel reveal">
+          <span class="label">Proof links</span>
+          <h3>Open the work</h3>
+          <div class="link-row">
+            <a class="card-link" href="https://github.com/BeBecpp/NOtFound_404-Web" target="_blank" rel="noopener noreferrer">Team repo</a>
+            <a class="card-link" href="https://bebecpp.github.io/my_blog/" target="_blank" rel="noopener noreferrer">BeBe portfolio</a>
+            <a class="card-link" href="https://github.com/BeBecpp" target="_blank" rel="noopener noreferrer">BeBe GitHub</a>
+            <a class="card-link" href="https://fluxknight.github.io/portfolio/" target="_blank" rel="noopener noreferrer">FluxKnight portfolio</a>
+            <a class="card-link" href="https://github.com/FluxKnight" target="_blank" rel="noopener noreferrer">FluxKnight GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>(c) 2026 <span id="brandFooter">NOtFound_404</span>. AI / full-stack / defensive security.</span>
+    <span>No logo embedded. Rename-ready build.</span>
   </footer>
 
   <script>
-    (() => {
-      const toggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('#primary-nav');
-      if (!toggle || !nav) return;
+    const BRAND_NAME = 'NOtFound_404';
 
-      const setOpen = (open) => {
-        nav.classList.toggle('is-open', open);
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      };
+    const projects = [
+      { name: 'BreachPilot', type: 'Security + AI', category: 'security ai fullstack team', desc: 'MCP-powered incident commander concept for Splunk workflows: gather evidence, investigate alerts, and generate analyst-ready briefs.', tags: ['Splunk', 'MCP', 'Incident Ops'], url: 'https://github.com/BeBecpp/BreachPilot' },
+      { name: 'TUTall Backend', type: 'AI', category: 'ai fullstack', desc: 'Backend system for guided STEM learning with explanations, quizzes, hints, and progress-oriented learning flows.', tags: ['Python', 'AI Tutor', 'Learning'], url: 'https://github.com/BeBecpp/TUTall_backend' },
+      { name: 'TUTall Frontend', type: 'Frontend', category: 'frontend fullstack ai', desc: 'Clean learning interface for TUTall, designed to make AI-assisted studying feel direct and easy to follow.', tags: ['JavaScript', 'Education UI', 'Product'], url: 'https://github.com/BeBecpp/TUTall_frontend' },
+      { name: 'HelioGuard AI', type: 'Data + AI', category: 'data ai frontend', desc: 'NASA-data-inspired dashboard for space risk intelligence, built as a stronger visual story around data and AI.', tags: ['NASA Data', 'Dashboard', 'Risk'], url: 'https://github.com/BeBecpp/helioguard-ai' },
+      { name: 'SkillProof AI', type: 'AI', category: 'ai fullstack team', desc: 'Turns GitHub activity into structured skill evidence, portfolio proof, and reportable developer signals.', tags: ['GitHub', 'Reports', 'Scoring'], url: 'https://skillproof-ai-9u61.onrender.com/' },
+      { name: 'HuruInk', type: 'Frontend', category: 'frontend ai', desc: 'Webcam-powered drawing experience using gesture interaction and canvas rendering for a playful technical demo.', tags: ['Gesture', 'Canvas', 'Vision'], url: 'https://bebecpp.github.io/HuruInk/' },
+      { name: 'TaliinAtlas', type: 'AI + UX', category: 'ai frontend', desc: 'Visual learning-map platform that turns complex topics into connected paths and easier study structure.', tags: ['Learning Map', 'UX', 'TypeScript'], url: 'https://taliin-atlas.vercel.app/' },
+      { name: 'Store AI Assistant', type: 'AI', category: 'ai fullstack', desc: 'Small-store assistant concept that answers from catalog data instead of guessing, keeping the output grounded.', tags: ['Catalog', 'Assistant', 'Python'], url: 'https://github.com/BeBecpp/Store_AI_Assistant' },
+      { name: 'MoodMeal AI', type: 'AI', category: 'ai fullstack', desc: 'Recipe recommendation system that uses mood, ingredients, weather, meal time, and serving count.', tags: ['Flask', 'SQLite', 'Gemini'], url: 'https://github.com/BeBecpp/MoodMeal' },
+      { name: 'Blue Watch Lite', type: 'Utility', category: 'ai data', desc: 'Lightweight monitoring-oriented prototype focused on alerts, signals, and useful everyday workflows.', tags: ['Python', 'Alerts', 'Utility'], url: 'https://github.com/BeBecpp/Blue_Watch_lite' },
+      { name: 'ClapConnect', type: 'Frontend', category: 'frontend team', desc: 'Interaction-focused JavaScript project showing event logic, playful prototyping, and responsive UI thinking.', tags: ['JavaScript', 'Interaction', 'Prototype'], url: 'https://github.com/BeBecpp/ClapConnect' },
+      { name: 'Midnight Tea Garden', type: 'Frontend', category: 'frontend', desc: 'Visual web experiment focused on atmosphere, creative UI direction, layout rhythm, and frontend taste.', tags: ['Creative UI', 'Visual', 'Mood'], url: 'https://github.com/BeBecpp/midnight_tea_garden' },
+      { name: 'Crypto Tool', type: 'Security', category: 'security', desc: 'Beginner-friendly cryptography helper for CTF practice, repeatable decoding, and challenge-solving flow.', tags: ['Crypto', 'CTF', 'Python'], url: 'https://github.com/BeBecpp/Crypto-tool' },
+      { name: 'my_ctf_tools', type: 'Security', category: 'security team', desc: 'Personal CTF tooling collection for scripts, notes, repeatable workflows, and practice discipline.', tags: ['CTF', 'Scripts', 'Workflow'], url: 'https://github.com/BeBecpp/my_ctf_tools' },
+      { name: 'AI Assistant Chatbot', type: 'AI', category: 'ai fullstack', desc: 'Assistant integration project connected to practical use cases, useful answers, and cleaner product flow.', tags: ['Chatbot', 'Assistant', 'Python'], url: 'https://github.com/BeBecpp/AI_Assistant_Chatbot' },
+      { name: 'CNN Image Classification', type: 'Data + Vision', category: 'data ai', desc: 'PyTorch computer-vision project classifying Mongolian vehicle plate images by character count.', tags: ['PyTorch', 'CNN', 'Vision'], url: 'https://github.com/BeBecpp/CNN-Image-Classification' },
+      { name: 'Aura Guide', type: 'Team Build', category: 'team ai fullstack', desc: 'Assistive concept combining sensors, warning feedback, and software logic for accessibility-focused problem solving.', tags: ['Accessibility', 'Sensors', 'Team'], url: 'https://github.com/BeBecpp/Aura_Guide' },
+      { name: 'DevGuard AI', type: 'Security + AI', category: 'security ai fullstack', desc: 'FastAPI code-security reviewer that scans risky patterns and produces clear findings, risk scores, and reports.', tags: ['FastAPI', 'Static Analysis', 'Reports'], url: 'https://github.com/FluxKnight/DevGuard-AI' },
+      { name: 'AegisLink', type: 'Security API', category: 'security fullstack', desc: 'Defensive URL-risk analysis API with rule-based scoring, safe recommendations, history, and incident-style reports.', tags: ['URL Risk', 'API', 'Python'], url: 'https://github.com/FluxKnight/AegisLink' },
+      { name: 'Runner Void', type: 'Game', category: 'game', desc: 'Dark runner prototype focused on movement, collision, score loops, and clean gameplay feedback.', tags: ['Python', 'Pygame', 'Game Loop'], url: 'https://github.com/FluxKnight/Runner_void' }
+    ];
 
-      toggle.addEventListener('click', () => {
-        const isOpen = nav.classList.contains('is-open');
-        setOpen(!isOpen);
+    document.getElementById('brandName').textContent = BRAND_NAME;
+    document.getElementById('brandFooter').textContent = BRAND_NAME;
+
+    const projectGrid = document.getElementById('projectGrid');
+    const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+
+    function renderProjects(filter = 'all') {
+      const filtered = filter === 'all'
+        ? projects
+        : projects.filter((project) => project.category.split(' ').includes(filter));
+
+      projectGrid.innerHTML = filtered.map((project, index) => `
+        <article class="project-card pixel reveal visible" data-category="${project.category}">
+          <div class="project-top">
+            <span class="num">${String(index + 1).padStart(2, '0')}</span>
+            <span class="type">${project.type}</span>
+          </div>
+          <h3>${project.name}</h3>
+          <p>${project.desc}</p>
+          <div class="chips">${project.tags.map((tag) => `<span class="chip">${tag}</span>`).join('')}</div>
+          <a class="card-link" href="${project.url}" target="_blank" rel="noopener noreferrer">Open project -></a>
+        </article>
+      `).join('');
+    }
+
+    renderProjects();
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        renderProjects(button.dataset.filter);
       });
+    });
 
-      nav.addEventListener('click', (e) => {
-        const a = e.target.closest('a');
-        if (a) setOpen(false);
-      });
+    const navLinks = document.getElementById('navLinks');
+    const menuBtn = document.getElementById('menuBtn');
+    const navItems = Array.from(document.querySelectorAll('.nav-link'));
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') setOpen(false);
-      });
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
 
-      document.addEventListener('click', (e) => {
-        if (!nav.classList.contains('is-open')) return;
-        if (e.target === toggle || toggle.contains(e.target)) return;
-        if (e.target === nav || nav.contains(e.target)) return;
-        setOpen(false);
+    navItems.forEach((link) => {
+      link.addEventListener('click', () => {
+        navItems.forEach((item) => item.classList.remove('active'));
+        link.classList.add('active');
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
       });
-    })();
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.13 });
+
+    document.querySelectorAll('.reveal').forEach((node) => revealObserver.observe(node));
+
+    const sections = Array.from(document.querySelectorAll('main section[id]'));
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const active = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!active) return;
+      const id = `#${active.target.id}`;
+      const link = navItems.find((item) => item.getAttribute('href') === id);
+      if (!link) return;
+      navItems.forEach((item) => item.classList.remove('active'));
+      link.classList.add('active');
+    }, { rootMargin: '-38% 0px -50% 0px', threshold: [0.2, 0.4, 0.6] });
+
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    const copyEmailBtn = document.getElementById('copyEmail');
+    copyEmailBtn.addEventListener('click', async () => {
+      const email = 'pynotix.py@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        const previous = copyEmailBtn.textContent;
+        copyEmailBtn.textContent = 'Copied';
+        setTimeout(() => copyEmailBtn.textContent = previous, 1300);
+      } catch {
+        window.location.href = `mailto:${email}`;
+      }
+    });
   </script>
 </body>
 </html>
