@@ -3,47 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07010f" />
-  <meta name="description" content="NOtFound_404 is a Mongolia-based builder team shipping AI systems, full-stack products, defensive cybersecurity tools, CTF utilities, data experiments, and retro-grade web experiences." />
-  <meta property="og:title" content="NOtFound_404 - Builder Team" />
-  <meta property="og:description" content="AI engineering. Full-stack products. Defensive security. Retro-grade execution." />
+  <meta name="theme-color" content="#05070c" />
+  <meta name="description" content="NOtFound_404 is a Mongolia-based builder team working across AI engineering, full-stack development, defensive cybersecurity, product UI, CTF practice, and shipped prototypes." />
+  <meta property="og:title" content="NOtFound_404 — AI, Full-Stack & Security Team" />
+  <meta property="og:description" content="Practical AI systems, full-stack prototypes, defensive security tools, and polished product experiences." />
   <meta property="og:type" content="website" />
-  <title>NOtFound_404 - Builder Team</title>
+  <title>NOtFound_404 — Builder Team</title>
+
   <style>
     :root {
-      --bg: #07010f;
-      --bg2: #100525;
-      --ink: #fff7f7;
-      --muted: #b7b0c9;
-      --cyan: #22f7ff;
-      --pink: #ff4fd8;
-      --lime: #a8ff3e;
-      --yellow: #ffd95a;
-      --purple: #7c4dff;
-      --blue: #3d7cff;
-      --red: #ff4c64;
-      --panel: #130a2a;
-      --panel2: #1d123a;
-      --line: rgba(255,255,255,.20);
-      --black: #020006;
-      --max: 1220px;
-      --shadow: 8px 8px 0 var(--black);
-      --shadow-sm: 5px 5px 0 var(--black);
-      --font: ui-monospace, "SFMono-Regular", "Cascadia Code", "Liberation Mono", Menlo, Consolas, monospace;
+      --bg: #05070c;
+      --bg-soft: #080c14;
+      --panel: rgba(255, 255, 255, 0.055);
+      --panel-2: rgba(255, 255, 255, 0.085);
+      --panel-3: rgba(255, 255, 255, 0.12);
+      --line: rgba(255, 255, 255, 0.105);
+      --line-2: rgba(255, 255, 255, 0.18);
+      --text: #f6f8ff;
+      --muted: #98a4b8;
+      --soft: #cbd4e5;
+      --accent: #7cf7d4;
+      --accent-2: #8ea0ff;
+      --accent-3: #f7e78a;
+      --ink: #06110e;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+      --max: 1200px;
+      --radius-xl: 36px;
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --nav-h: 76px;
+      --ease: cubic-bezier(.16, .84, .24, 1);
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       min-height: 100vh;
-      color: var(--ink);
-      font-family: var(--font);
+      color: var(--text);
       background:
-        radial-gradient(circle at 12% 10%, rgba(34,247,255,.20), transparent 18rem),
-        radial-gradient(circle at 88% 8%, rgba(255,79,216,.20), transparent 20rem),
-        radial-gradient(circle at 50% 100%, rgba(168,255,62,.12), transparent 18rem),
-        linear-gradient(180deg, var(--bg), #09031b 50%, #04000c);
+        radial-gradient(circle at 10% 5%, rgba(124, 247, 212, .16), transparent 31rem),
+        radial-gradient(circle at 90% 14%, rgba(142, 160, 255, .15), transparent 34rem),
+        radial-gradient(circle at 50% 105%, rgba(247, 231, 138, .07), transparent 30rem),
+        linear-gradient(180deg, #05070c 0%, #070b12 48%, #04060a 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow-x: hidden;
     }
 
@@ -52,12 +57,11 @@
       position: fixed;
       inset: 0;
       z-index: -2;
-      background-image:
-        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
-        linear-gradient(45deg, rgba(255,79,216,.035) 25%, transparent 25%, transparent 75%, rgba(34,247,255,.035) 75%);
-      background-size: 24px 24px, 24px 24px, 48px 48px;
-      image-rendering: pixelated;
+      background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 58px 58px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.95), transparent 82%);
       pointer-events: none;
     }
 
@@ -65,852 +69,942 @@
       content: "";
       position: fixed;
       inset: 0;
-      z-index: 999;
+      z-index: -1;
+      background:
+        radial-gradient(circle at center, transparent 0%, rgba(0,0,0,.44) 100%),
+        linear-gradient(90deg, rgba(255,255,255,.018), transparent 18%, transparent 82%, rgba(255,255,255,.018));
       pointer-events: none;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,.045) 0,
-        rgba(255,255,255,.045) 1px,
-        transparent 1px,
-        transparent 5px
-      );
-      mix-blend-mode: overlay;
-      opacity: .55;
     }
 
     a { color: inherit; text-decoration: none; }
     button { font: inherit; }
 
     .wrap {
-      width: min(calc(100% - 28px), var(--max));
+      width: min(calc(100% - 32px), var(--max));
       margin-inline: auto;
     }
 
-    .pixel {
-      border: 2px solid var(--line);
-      background: linear-gradient(180deg, rgba(29,18,58,.96), rgba(13,5,31,.96));
-      box-shadow: var(--shadow);
-    }
-
-    .topbar {
-      position: sticky;
-      top: 12px;
-      z-index: 50;
-      margin-top: 12px;
-    }
-
     .nav {
-      min-height: 76px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 14px;
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      z-index: 50;
+      width: min(calc(100% - 32px), var(--max));
+      min-height: var(--nav-h);
+      transform: translateX(-50%);
+      display: flex;
       align-items: center;
-      padding: 12px;
-      border: 2px solid rgba(255,255,255,.25);
-      background: rgba(10,4,30,.88);
-      box-shadow: 7px 7px 0 #000;
-      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 12px 10px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(5, 7, 12, .72);
+      backdrop-filter: blur(24px);
+      box-shadow: 0 18px 70px rgba(0,0,0,.3);
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       min-width: max-content;
-      font-weight: 900;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
+      font-weight: 850;
+      letter-spacing: -.04em;
     }
 
-    .brand-badge {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border: 2px solid var(--cyan);
+    .brand-signal {
+      position: relative;
+      width: 39px;
+      height: 39px;
+      border-radius: 14px;
+      border: 1px solid rgba(124,247,212,.32);
       background:
-        linear-gradient(90deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
-        linear-gradient(0deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
-        #12042c;
-      box-shadow: 4px 4px 0 #000;
-      color: var(--cyan);
-      font-size: 12px;
+        radial-gradient(circle at 34% 30%, rgba(124,247,212,.58), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.035));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 14px 38px rgba(124,247,212,.08);
     }
 
-    .brand small {
-      display: block;
-      color: var(--yellow);
-      font-size: 10px;
-      letter-spacing: .12em;
-      margin-top: 4px;
+    .brand-signal::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(124,247,212,.88);
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 3px;
+      line-height: 1;
+    }
+
+    .brand-copy strong {
+      font-size: 15px;
+    }
+
+    .brand-copy span {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-weight: 720;
     }
 
     .nav-links {
       display: flex;
-      justify-content: center;
-      gap: 6px;
-      min-width: 0;
+      align-items: center;
+      gap: 4px;
+      padding: 5px;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 999px;
+      background: rgba(255,255,255,.035);
     }
 
     .nav-link {
-      position: relative;
-      padding: 10px 11px;
-      border: 2px solid transparent;
+      padding: 10px 13px;
+      border-radius: 999px;
       color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      transition: .16s ease;
+      font-size: 13px;
+      font-weight: 740;
+      transition: color .18s ease, background .18s ease;
       white-space: nowrap;
     }
 
     .nav-link:hover,
     .nav-link.active {
-      color: var(--ink);
-      border-color: var(--cyan);
-      background: rgba(34,247,255,.10);
-      box-shadow: 3px 3px 0 #000;
-      transform: translate(-2px,-2px);
+      color: var(--text);
+      background: rgba(255,255,255,.065);
     }
 
-    .nav-actions { display: flex; gap: 8px; align-items: center; }
-    .menu-btn { display: none; width: 44px; padding-inline: 0; }
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      min-height: 44px;
-      padding: 0 14px;
-      border: 2px solid rgba(255,255,255,.25);
-      background: #170735;
-      color: var(--ink);
-      box-shadow: 4px 4px 0 #000;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
+      gap: 9px;
+      min-height: 43px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.055);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 790;
       cursor: pointer;
-      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
+      white-space: nowrap;
+      transition: transform .22s var(--ease), border-color .22s ease, background .22s ease, box-shadow .22s ease;
     }
 
     .btn:hover {
-      transform: translate(-2px,-2px);
-      box-shadow: 6px 6px 0 #000;
-      border-color: var(--pink);
-      background: #26094f;
+      transform: translateY(-2px);
+      border-color: rgba(124,247,212,.38);
+      background: rgba(124,247,212,.075);
+      box-shadow: 0 16px 44px rgba(124,247,212,.08);
     }
 
     .btn.primary {
-      color: #07010f;
-      background: var(--cyan);
-      border-color: var(--ink);
-      text-shadow: none;
+      color: var(--ink);
+      border-color: transparent;
+      background: linear-gradient(135deg, #effffb, var(--accent));
+      box-shadow: 0 18px 48px rgba(124,247,212,.16);
     }
 
-    .btn.primary:hover { background: var(--lime); border-color: var(--yellow); }
+    .menu-btn { display: none; width: 43px; padding: 0; }
 
-    main { padding-top: 24px; }
-    section { scroll-margin-top: 110px; }
+    main { padding-top: 112px; }
+    section { scroll-margin-top: 112px; }
 
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0,1.05fr) minmax(330px,.95fr);
-      gap: 22px;
-      align-items: stretch;
-      padding: 54px 0 34px;
       min-height: calc(100vh - 112px);
-    }
-
-    .hero-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: clamp(22px, 4vw, 42px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-copy::before,
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      background:
-        linear-gradient(90deg, transparent 46%, rgba(255,255,255,.25) 47%, rgba(255,255,255,.25) 53%, transparent 54%),
-        linear-gradient(0deg, transparent 46%, rgba(255,255,255,.25) 47%, rgba(255,255,255,.25) 53%, transparent 54%),
-        rgba(255,79,216,.18);
-      image-rendering: pixelated;
-    }
-
-    .hero-copy::before { right: 22px; top: 22px; }
-    .hero-copy::after { left: 28px; bottom: 26px; background-color: rgba(34,247,255,.13); }
-
-    .kicker {
-      display: inline-flex;
-      width: fit-content;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: minmax(0,1.05fr) minmax(340px,.86fr);
+      gap: 28px;
       align-items: center;
-      color: var(--lime);
-      background: rgba(168,255,62,.08);
-      border: 2px solid rgba(168,255,62,.45);
-      padding: 8px 10px;
-      box-shadow: 4px 4px 0 #000;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: .07em;
-      position: relative;
-      z-index: 1;
+      padding-top: 34px;
+      padding-bottom: 58px;
     }
 
-    .kicker::before {
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 34px;
+      width: fit-content;
+      padding: 0 12px;
+      border: 1px solid rgba(124,247,212,.2);
+      border-radius: 999px;
+      background: rgba(124,247,212,.07);
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 760;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
       content: "";
-      width: 10px;
-      height: 10px;
-      background: var(--lime);
-      box-shadow: 0 0 16px var(--lime);
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(124,247,212,.8);
     }
 
     h1, h2, h3, p { margin-top: 0; }
 
     .hero h1 {
-      position: relative;
-      z-index: 1;
-      margin: 24px 0 18px;
-      max-width: 11ch;
-      font-size: clamp(2.7rem, 7vw, 6.8rem);
-      line-height: .86;
-      letter-spacing: -.09em;
-      text-transform: uppercase;
-      text-shadow:
-        4px 4px 0 #000,
-        7px 0 0 rgba(255,79,216,.55),
-        -5px 0 0 rgba(34,247,255,.40);
+      margin: 20px 0 18px;
+      max-width: 12ch;
+      font-size: clamp(3rem, 6.8vw, 6.55rem);
+      line-height: .9;
+      letter-spacing: -.078em;
     }
 
-    .hero p {
-      position: relative;
-      z-index: 1;
-      max-width: 66ch;
-      color: #d8d1ea;
-      font-size: 1rem;
-      line-height: 1.85;
+    .gradient-text {
+      background: linear-gradient(120deg, #fff, #dffff7 36%, #aebaff 76%, #fff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy p {
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.07rem;
+      line-height: 1.76;
+      margin-bottom: 0;
     }
 
     .hero-actions {
-      position: relative;
-      z-index: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 27px;
     }
 
-    .stats {
-      position: relative;
-      z-index: 1;
+    .hero-stats {
       display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 32px;
     }
 
     .stat {
       padding: 16px;
-      border: 2px solid rgba(255,255,255,.20);
-      background: rgba(0,0,0,.22);
-      box-shadow: 4px 4px 0 #000;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
     .stat strong {
       display: block;
-      color: var(--yellow);
-      font-size: 1.7rem;
-      line-height: 1;
-      text-shadow: 3px 3px 0 #000;
+      font-size: 1.72rem;
+      letter-spacing: -.045em;
+      margin-bottom: 5px;
     }
 
     .stat span {
       display: block;
-      margin-top: 8px;
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
-      text-transform: uppercase;
+      font-size: .9rem;
+      line-height: 1.45;
     }
 
-    .window {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
+    .hero-panel,
+    .card,
+    .brand-board,
+    .skill-board,
+    .contact-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.075);
+    }
+
+    .hero-panel {
+      position: relative;
       overflow: hidden;
-    }
-
-    .window-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 10px;
-      border-bottom: 2px solid rgba(255,255,255,.18);
-      background: #230a45;
-    }
-
-    .dots { display: flex; gap: 7px; }
-    .dot {
-      width: 13px;
-      height: 13px;
-      border: 2px solid #000;
-      box-shadow: 2px 2px 0 #000;
-    }
-    .dot:nth-child(1){ background: var(--red); }
-    .dot:nth-child(2){ background: var(--yellow); }
-    .dot:nth-child(3){ background: var(--lime); }
-
-    .window-title {
-      color: var(--cyan);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .console {
-      flex: 1;
-      padding: 22px;
-      display: grid;
-      gap: 14px;
-      align-content: start;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
       background:
-        linear-gradient(rgba(255,255,255,.035) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 2px, transparent 2px),
-        rgba(5,1,16,.88);
-      background-size: 18px 18px;
+        linear-gradient(180deg, rgba(255,255,255,.082), rgba(255,255,255,.038)),
+        radial-gradient(circle at 20% 0%, rgba(124,247,212,.16), transparent 28rem),
+        radial-gradient(circle at 90% 20%, rgba(142,160,255,.14), transparent 26rem);
     }
 
-    .cmd {
-      border: 2px solid rgba(255,255,255,.16);
-      background: rgba(0,0,0,.30);
-      padding: 14px;
-      box-shadow: 4px 4px 0 #000;
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+      pointer-events: none;
     }
 
-    .cmd b {
-      color: var(--lime);
-      display: block;
-      margin-bottom: 8px;
-      font-size: 12px;
-      text-transform: uppercase;
+    .panel-inner {
+      position: relative;
+      z-index: 1;
+      padding: 22px;
     }
 
-    .cmd p {
-      color: var(--muted);
-      line-height: 1.65;
-      margin: 0;
-      font-size: 13px;
-    }
-
-    .cmd .line {
-      color: var(--cyan);
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .ticker {
-      border-block: 2px solid rgba(255,255,255,.22);
-      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan), var(--lime));
-      color: #05020b;
-      overflow: hidden;
-      box-shadow: 0 5px 0 #000, 0 -5px 0 #000;
-    }
-
-    .ticker-track {
+    .panel-top {
       display: flex;
-      width: max-content;
-      animation: tick 28s linear infinite;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 18px;
     }
 
-    .ticker span {
-      padding: 12px 22px;
+    .panel-top h2 {
+      font-size: 1.34rem;
+      letter-spacing: -.035em;
+      margin-bottom: 6px;
+    }
+
+    .panel-top p {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.55;
+      font-size: .95rem;
+    }
+
+    .status {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 11px;
+      border: 1px solid rgba(124,247,212,.2);
+      border-radius: 999px;
+      background: rgba(124,247,212,.07);
+      color: var(--soft);
       font-size: 12px;
-      font-weight: 1000;
-      text-transform: uppercase;
+      font-weight: 760;
       white-space: nowrap;
     }
 
-    @keyframes tick {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+    .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
     }
 
-    .section {
-      padding: 84px 0;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0,.9fr) minmax(280px,.72fr);
-      gap: 18px;
-      align-items: end;
-      margin-bottom: 24px;
-    }
-
-    .section-tag {
-      color: var(--cyan);
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .14em;
-    }
-
-    .section h2 {
-      margin: 12px 0 0;
-      font-size: clamp(2rem, 4.8vw, 4.2rem);
-      line-height: .92;
-      letter-spacing: -.07em;
-      text-transform: uppercase;
-      text-shadow: 4px 4px 0 #000;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      line-height: 1.75;
-      margin: 0;
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 18px;
-    }
-
-    .big-panel {
-      padding: clamp(20px,4vw,34px);
-      min-height: 430px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .big-panel::after {
-      content: "BUILD";
-      position: absolute;
-      right: -18px;
-      bottom: 6px;
-      color: rgba(255,255,255,.045);
-      font-size: clamp(5rem,15vw,12rem);
-      font-weight: 1000;
-      letter-spacing: -.1em;
-      line-height: .8;
-    }
-
-    .big-panel h3 {
-      max-width: 15ch;
-      color: var(--yellow);
-      font-size: clamp(1.8rem,3.6vw,3.2rem);
-      line-height: .96;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
-      text-shadow: 4px 4px 0 #000;
-    }
-
-    .big-panel p {
-      position: relative;
-      z-index: 1;
-      color: #d8d1ea;
-      line-height: 1.85;
-      max-width: 72ch;
-    }
-
-    .proof-list {
-      position: relative;
-      z-index: 1;
+    .focus-stack {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
     }
 
-    .proof-row {
+    .focus-item {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 14px;
-      align-items: start;
-      padding: 14px;
-      border: 2px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.20);
-      box-shadow: 4px 4px 0 #000;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      background: rgba(5,7,13,.42);
     }
 
-    .proof-row strong {
+    .focus-icon {
       display: grid;
       place-items: center;
-      width: 44px;
-      height: 44px;
-      background: var(--pink);
-      color: #05020b;
-      box-shadow: 3px 3px 0 #000;
-      font-size: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: rgba(124,247,212,.1);
+      border: 1px solid rgba(124,247,212,.2);
+      color: var(--accent);
+      font-weight: 850;
+      font-size: 13px;
     }
 
-    .proof-row b {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--ink);
-      text-transform: uppercase;
+    .focus-item h3 {
+      margin-bottom: 6px;
+      font-size: 1rem;
+      letter-spacing: -.02em;
     }
 
-    .proof-row span {
+    .focus-item p {
+      margin: 0;
       color: var(--muted);
       line-height: 1.55;
-      font-size: 13px;
+      font-size: .92rem;
     }
 
-    .side-stack {
-      display: grid;
+    .section { padding: 92px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
       gap: 18px;
+      margin-bottom: 28px;
     }
 
-    .side-card {
-      padding: 20px;
-      min-height: 206px;
-      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-    }
-
-    .side-card:hover,
-    .project-card:hover,
-    .skill-card:hover,
-    .member-card:hover,
-    .process-card:hover,
-    .contact-card:hover {
-      transform: translate(-3px,-3px);
-      box-shadow: 11px 11px 0 #000;
-      border-color: var(--cyan);
-    }
-
-    .side-card h3,
-    .skill-card h3,
-    .member-card h3,
-    .process-card h3,
-    .contact-card h3 {
-      margin: 10px 0 10px;
-      color: var(--yellow);
+    .section-kicker {
+      display: inline-block;
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 830;
+      letter-spacing: .13em;
       text-transform: uppercase;
-      letter-spacing: -.04em;
-      line-height: 1.05;
-      text-shadow: 3px 3px 0 #000;
+      margin-bottom: 12px;
     }
 
-    .side-card p,
-    .skill-card p,
-    .member-card p,
-    .process-card p,
-    .contact-card p,
-    .project-card p {
-      color: var(--muted);
-      line-height: 1.65;
+    .section-head h2 {
+      max-width: 13ch;
       margin: 0;
-      font-size: 13px;
+      font-size: clamp(2.05rem, 4.3vw, 4.05rem);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+
+    .section-head p {
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 22px;
+      min-height: 236px;
+      border-radius: var(--radius-lg);
+      transition: transform .22s var(--ease), border-color .22s ease, background .22s ease, box-shadow .22s ease;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -60px;
+      bottom: -70px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(124,247,212,.12), transparent 70%);
+      opacity: 0;
+      transition: opacity .22s ease;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(124,247,212,.25);
+      box-shadow: 0 22px 70px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.04));
+    }
+
+    .card:hover::after { opacity: 1; }
+
+    .card-index {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+      font-size: 1.32rem;
+      line-height: 1.1;
+      letter-spacing: -.035em;
+    }
+
+    .card p {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      line-height: 1.67;
+      margin-bottom: 0;
+    }
+
+    .brand-board {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035)),
+        radial-gradient(circle at 14% 8%, rgba(124,247,212,.13), transparent 24rem);
+    }
+
+    .brand-board::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(142,160,255,.16), transparent 68%);
+      pointer-events: none;
+    }
+
+    .brand-system {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .brand-board h3 {
+      margin: 0 0 12px;
+      max-width: 14ch;
+      font-size: clamp(1.75rem, 3.2vw, 3rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .brand-board p {
+      color: var(--muted);
+      line-height: 1.72;
+      margin: 0;
+      max-width: 58ch;
+    }
+
+    .brand-principles {
+      display: grid;
+      gap: 12px;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+      background: rgba(5,7,13,.36);
+    }
+
+    .principle strong {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      color: var(--ink);
+      background: var(--accent);
+      font-size: 12px;
+    }
+
+    .principle b {
+      display: block;
+      margin-bottom: 5px;
+      letter-spacing: -.02em;
+    }
+
+    .principle span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: .93rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .large-card {
+      padding: 28px;
+      min-height: 100%;
+    }
+
+    .large-card h3 {
+      max-width: 14ch;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      color: var(--soft);
+      line-height: 1.55;
+    }
+
+    .list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin-top: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(124,247,212,.5);
+    }
+
+    .skill-board {
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      padding: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035)),
+        radial-gradient(circle at 0% 0%, rgba(124,247,212,.12), transparent 28rem);
+    }
+
+    .skill-board-top {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 18px;
+      padding: 28px;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+
+    .skill-board-top h3 {
+      max-width: 13ch;
+      margin: 0;
+      font-size: clamp(1.9rem, 3.4vw, 3.2rem);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+
+    .skill-board-top p {
+      color: var(--muted);
+      line-height: 1.76;
+      margin: 0;
+    }
+
+    .skill-matrix {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr .95fr .95fr;
+    }
+
+    .matrix-cell {
+      min-height: 118px;
+      padding: 18px;
+      border-right: 1px solid rgba(255,255,255,.075);
+      border-bottom: 1px solid rgba(255,255,255,.075);
+    }
+
+    .matrix-cell:nth-child(4n) { border-right: none; }
+
+    .matrix-head {
+      min-height: auto;
+      background: rgba(255,255,255,.035);
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 830;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .matrix-cell h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: -.02em;
+    }
+
+    .matrix-cell p {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.58;
+      font-size: .92rem;
+    }
+
+    .level {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 28px;
+      margin-bottom: 10px;
+      padding: 0 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,247,212,.2);
+      background: rgba(124,247,212,.07);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .level::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 22px 28px 28px;
     }
 
     .filters {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 0 0 18px;
+      margin-bottom: 18px;
     }
 
     .filter-btn {
       min-height: 40px;
-      padding: 0 12px;
-      border: 2px solid rgba(255,255,255,.24);
-      background: #15072f;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
       color: var(--muted);
-      box-shadow: 4px 4px 0 #000;
       cursor: pointer;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 740;
+      transition: all .18s ease;
     }
 
     .filter-btn:hover,
     .filter-btn.active {
-      color: #05020b;
-      background: var(--lime);
-      border-color: var(--ink);
-      transform: translate(-2px,-2px);
-      box-shadow: 6px 6px 0 #000;
+      color: var(--text);
+      border-color: rgba(124,247,212,.28);
+      background: rgba(124,247,212,.08);
     }
 
-    .project-grid,
-    .skill-grid,
-    .team-grid,
-    .process-grid {
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
     }
 
     .project-card {
-      min-height: 294px;
-      padding: 18px;
       display: grid;
-      gap: 12px;
+      gap: 14px;
       align-content: start;
-      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-      position: relative;
-      overflow: hidden;
+      min-height: 286px;
     }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(135deg, rgba(34,247,255,.12), transparent 36%),
-        radial-gradient(circle at 90% 90%, rgba(255,79,216,.15), transparent 34%);
-      pointer-events: none;
-    }
-
-    .project-card > * { position: relative; z-index: 1; }
 
     .project-top {
       display: flex;
-      justify-content: space-between;
-      gap: 10px;
       align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .num {
+    .project-num {
       display: grid;
       place-items: center;
       width: 42px;
       height: 42px;
-      background: var(--cyan);
-      color: #05020b;
-      border: 2px solid #fff;
-      box-shadow: 3px 3px 0 #000;
-      font-weight: 1000;
+      border: 1px solid rgba(124,247,212,.2);
+      border-radius: 14px;
+      background: rgba(124,247,212,.08);
+      color: var(--accent);
+      font-size: .95rem;
+      font-weight: 850;
     }
 
-    .type {
-      color: var(--pink);
-      border: 2px solid rgba(255,79,216,.45);
-      background: rgba(255,79,216,.08);
-      padding: 7px 9px;
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .project-card h3 {
-      margin: 0;
-      color: var(--ink);
-      font-size: 1.22rem;
-      line-height: 1.08;
-      text-transform: uppercase;
-      letter-spacing: -.04em;
-      text-shadow: 3px 3px 0 #000;
+    .project-type {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      font-size: 12px;
+      font-weight: 760;
     }
 
     .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
+      gap: 8px;
     }
 
     .chip {
       display: inline-flex;
       align-items: center;
-      min-height: 28px;
-      padding: 0 8px;
-      border: 2px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.22);
-      color: #eae2ff;
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
+      min-height: 29px;
+      padding: 0 10px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 720;
+    }
+
+    .chip.accent {
+      border-color: rgba(124,247,212,.2);
+      background: rgba(124,247,212,.075);
+      color: var(--text);
     }
 
     .card-link {
       width: fit-content;
       margin-top: auto;
-      color: #05020b;
-      background: var(--yellow);
-      border: 2px solid #fff;
-      box-shadow: 4px 4px 0 #000;
-      padding: 10px 11px;
-      font-size: 12px;
-      font-weight: 1000;
-      text-transform: uppercase;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid rgba(124,247,212,.22);
+      border-radius: 999px;
+      background: rgba(124,247,212,.075);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 780;
+      transition: transform .18s var(--ease), background .18s ease;
     }
 
     .card-link:hover {
-      background: var(--cyan);
-      transform: translate(-2px,-2px);
-      box-shadow: 6px 6px 0 #000;
+      transform: translateX(2px);
+      background: rgba(124,247,212,.12);
     }
 
-    .skill-card,
-    .member-card,
-    .process-card,
-    .contact-card {
-      padding: 20px;
-      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-    }
-
-    .skill-card {
-      min-height: 232px;
-    }
-
-    .label {
-      display: inline-flex;
-      width: fit-content;
-      color: #05020b;
-      background: var(--lime);
-      border: 2px solid #fff;
-      box-shadow: 3px 3px 0 #000;
-      padding: 6px 8px;
-      font-size: 11px;
-      font-weight: 1000;
-      text-transform: uppercase;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .member-card.feature {
-      grid-column: 1 / -1;
+    .member-grid {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 20px;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 16px;
+    }
+
+    .member-column {
+      display: grid;
+      gap: 16px;
+    }
+
+    .member-card {
+      min-height: auto;
+      display: grid;
+      gap: 16px;
     }
 
     .member-head {
       display: flex;
-      gap: 14px;
       align-items: center;
+      gap: 14px;
     }
 
     .avatar {
+      flex: 0 0 auto;
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
-      width: 64px;
-      height: 64px;
-      border: 2px solid #fff;
-      background:
-        linear-gradient(90deg, transparent 47%, rgba(255,255,255,.18) 48%, transparent 53%),
-        linear-gradient(0deg, transparent 47%, rgba(255,255,255,.18) 48%, transparent 53%),
-        var(--purple);
-      color: #fff;
-      box-shadow: 5px 5px 0 #000;
-      font-weight: 1000;
-      text-shadow: 2px 2px 0 #000;
+      border-radius: 18px;
+      border: 1px solid rgba(124,247,212,.2);
+      background: linear-gradient(135deg, rgba(124,247,212,.13), rgba(142,160,255,.13));
+      color: var(--text);
+      font-weight: 850;
     }
 
-    .member-meta small {
-      display: block;
-      color: var(--cyan);
-      margin-bottom: 6px;
-      font-size: 11px;
+    .member-meta span {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      font-weight: 1000;
-      letter-spacing: .08em;
+      margin-bottom: 5px;
     }
 
     .member-meta h3 {
       margin: 0;
-      color: var(--yellow);
-      font-size: 1.45rem;
+      font-size: 1.34rem;
     }
 
     .role {
       display: inline-flex;
       width: fit-content;
-      color: #05020b;
-      background: var(--pink);
-      border: 2px solid #fff;
-      box-shadow: 3px 3px 0 #000;
-      padding: 7px 9px;
-      font-size: 11px;
-      font-weight: 1000;
-      text-transform: uppercase;
+      min-height: 31px;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(142,160,255,.18);
+      background: rgba(142,160,255,.075);
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 760;
     }
 
-    .member-body {
-      display: grid;
-      gap: 13px;
-    }
-
-    .list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 9px;
-    }
-
-    .list li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 9px;
-      color: #d8d1ea;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .list li::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      margin-top: 5px;
-      background: var(--cyan);
-      box-shadow: 2px 2px 0 #000;
-    }
-
-    .link-row {
+    .member-links {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
     }
 
-    .process-card {
-      min-height: 190px;
-      position: relative;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 14px;
     }
 
-    .process-card::after {
-      content: attr(data-step);
-      position: absolute;
-      right: 12px;
-      bottom: 4px;
-      color: rgba(255,255,255,.06);
-      font-size: 4rem;
-      font-weight: 1000;
-      letter-spacing: -.1em;
+    .process-card {
+      min-height: 190px;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 16px;
     }
 
-    footer.wrap {
+    .contact-card {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+    }
+
+    .footer {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding: 24px 0 36px;
       color: var(--muted);
+      font-size: .92rem;
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 12px;
-      padding: 34px 0 44px;
-      font-size: 12px;
-      text-transform: uppercase;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,.08);
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(16px);
-      transition: opacity .45s ease, transform .45s ease;
+      transform: translateY(18px);
+      transition: opacity .55s ease, transform .55s var(--ease);
     }
 
     .reveal.visible {
@@ -918,210 +1012,350 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 1080px) {
-      .hero,
-      .proof-grid,
-      .section-head,
-      .contact-grid {
+    @media (max-width: 1120px) {
+      .hero, .split, .member-grid, .contact-grid, .brand-system, .skill-board-top {
         grid-template-columns: 1fr;
       }
-
-      .hero {
-        min-height: auto;
+      .hero { min-height: auto; }
+      .hero h1 { max-width: 13ch; }
+      .project-grid, .grid-3 {
+        grid-template-columns: repeat(2, minmax(0,1fr));
       }
-
-      .project-grid,
-      .skill-grid,
       .process-grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));
       }
-
-      .nav {
-        grid-template-columns: auto auto;
+      .section-head {
+        align-items: start;
+        flex-direction: column;
       }
-
-      .nav-links {
-        grid-column: 1 / -1;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 4px;
-        display: none;
+      .skill-matrix {
+        grid-template-columns: 1fr 1fr;
       }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: inline-flex;
-      }
-
-      .nav-actions .btn:not(.menu-btn) {
-        display: none;
-      }
+      .matrix-cell:nth-child(4n) { border-right: 1px solid rgba(255,255,255,.075); }
+      .matrix-cell:nth-child(2n) { border-right: none; }
     }
 
-    @media (max-width: 720px) {
-      .wrap { width: min(calc(100% - 18px), var(--max)); }
-      .topbar { top: 8px; margin-top: 8px; }
-      .nav { padding: 9px; gap: 10px; }
-      .brand-badge { width: 36px; height: 36px; }
-      .brand { font-size: 14px; }
-      .brand small { font-size: 9px; }
-      main { padding-top: 10px; }
-      .hero { padding-top: 28px; gap: 16px; }
-      .hero-copy, .console, .big-panel, .skill-card, .member-card, .process-card, .contact-card { padding: 16px; }
-      .hero h1 { font-size: clamp(2.4rem, 16vw, 4.2rem); }
-      .hero p { font-size: .94rem; }
-      .stats,
-      .project-grid,
-      .skill-grid,
-      .team-grid,
-      .process-grid {
+    @media (max-width: 900px) {
+      .nav {
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 26px;
+      }
+      .menu-btn { display: inline-flex; }
+      .nav-links {
+        order: 3;
+        width: 100%;
+        display: none;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links.open { display: flex; }
+      .nav-actions .btn:not(.menu-btn) { display: none; }
+      main { padding-top: 118px; }
+    }
+
+    @media (max-width: 650px) {
+      .wrap, .nav, .footer {
+        width: min(calc(100% - 22px), var(--max));
+      }
+      .brand-copy strong { font-size: 14px; }
+      .brand-copy span { font-size: 10px; }
+      .brand-signal { width: 35px; height: 35px; border-radius: 12px; }
+      .hero { padding-top: 24px; }
+      .hero h1 { font-size: clamp(2.72rem, 15vw, 4.3rem); }
+      .hero-copy p { font-size: .98rem; }
+      .hero-stats, .project-grid, .grid-3, .process-grid, .skill-matrix {
         grid-template-columns: 1fr;
       }
-      .member-card.feature {
-        grid-template-columns: 1fr;
+      .matrix-cell,
+      .matrix-cell:nth-child(2n),
+      .matrix-cell:nth-child(4n) {
+        border-right: none;
       }
-      .section { padding: 64px 0; }
-      .section h2 { font-size: clamp(2rem, 12vw, 3.5rem); }
-      .filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
-      .filter-btn { flex: 0 0 auto; }
-      .pixel { box-shadow: 5px 5px 0 #000; }
-      .project-card { min-height: auto; }
+      .section { padding: 72px 0; }
+      .section-head h2 { font-size: clamp(2rem, 10vw, 3.1rem); }
+      .card, .hero-panel, .brand-board, .skill-board, .contact-card {
+        border-radius: 24px;
+      }
+      .panel-inner, .card, .brand-board, .contact-card {
+        padding: 18px;
+      }
+      .skill-board-top {
+        padding: 20px;
+      }
+      .skill-tags {
+        padding: 18px 20px 22px;
+      }
+      .panel-top {
+        flex-direction: column;
+      }
+      .filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+      .filter-btn {
+        flex: 0 0 auto;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header class="topbar wrap">
-    <div class="nav">
-      <a class="brand" href="#home" aria-label="Home">
-        <span class="brand-badge">404</span>
-        <span><span id="brandName">NOtFound_404</span><small>retro-grade builder team</small></span>
-      </a>
+  <header class="nav" aria-label="Main navigation">
+    <a href="#home" class="brand" aria-label="NOtFound_404 home">
+      <span class="brand-signal" aria-hidden="true"></span>
+      <span class="brand-copy">
+        <strong id="brandName">NOtFound_404</strong>
+        <span>Build · Secure · Ship</span>
+      </span>
+    </a>
 
-      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a class="nav-link active" href="#home">Start</a>
-        <a class="nav-link" href="#proof">Proof</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#team">Team</a>
-        <a class="nav-link" href="#process">Process</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
+    <nav class="nav-links" id="navLinks">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#identity">Identity</a>
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#team">Team</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
 
-      <div class="nav-actions">
-        <a class="btn" href="https://github.com/BeBecpp/NOtFound_404-Web" target="_blank" rel="noopener noreferrer">Source</a>
-        <a class="btn primary" href="#projects">Work</a>
-        <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks">==</button>
-      </div>
+    <div class="nav-actions">
+      <a class="btn" href="https://github.com/BeBecpp/NOtFound_404-Web" target="_blank" rel="noopener noreferrer">Repo</a>
+      <a class="btn primary" href="#projects">See work</a>
+      <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </header>
 
   <main>
     <section class="hero wrap" id="home">
-      <article class="hero-copy pixel reveal">
-        <span class="kicker">Mongolia // AI // Full-stack // Security</span>
-        <h1>Retro systems. Real products.</h1>
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Mongolia-based builder team</span>
+        <h1><span class="gradient-text">Build useful systems. Secure the details. Ship the proof.</span></h1>
         <p>
-          We are a small builder team turning technical curiosity into products people can open, test, and understand.
-          Our roots are in CTF and security, but the work is broader now: AI workflows, full-stack prototypes,
-          premium web experiences, data experiments, and defensive tools with clear purpose.
+          NOtFound_404 is a small engineering team focused on practical AI systems, full-stack product
+          development, defensive cybersecurity, CTF depth, and polished user experiences. The team values
+          working demos, clear technical thinking, and projects that can be opened, tested, and trusted.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Enter projects</a>
-          <a class="btn" href="#team">Meet crew</a>
+          <a class="btn primary" href="#projects">Explore projects</a>
+          <a class="btn" href="#skills">View skills</a>
         </div>
-        <div class="stats">
-          <div class="stat"><strong>20+</strong><span>selected builds and project directions</span></div>
-          <div class="stat"><strong>3</strong><span>core members with focused roles</span></div>
-          <div class="stat"><strong>0</strong><span>fake logo assets; rename-ready brand</span></div>
+        <div class="hero-stats">
+          <article class="stat"><strong>20+</strong><span>selected builds across AI, web, security, data, and tools</span></article>
+          <article class="stat"><strong>3</strong><span>focused members with clear technical roles</span></article>
+          <article class="stat"><strong>1</strong><span>team standard: useful projects, clean execution</span></article>
         </div>
-      </article>
+      </div>
 
-      <aside class="window pixel reveal" aria-label="Team operating terminal">
-        <div class="window-bar">
-          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          <span class="window-title">team_os.exe</span>
-        </div>
-        <div class="console">
-          <div class="cmd">
-            <b>boot sequence</b>
-            <p class="line">$ load identity --mode builder-team</p>
-            <p class="line">$ disable generic-ctf-only-profile</p>
-            <p class="line">$ enable ai + fullstack + defensive-security</p>
-          </div>
-          <div class="cmd">
-            <b>mission</b>
-            <p>Build products that prove skill fast: useful interfaces, working logic, clear reports, strong project stories, and ethical security practice.</p>
-          </div>
-          <div class="cmd">
-            <b>signal</b>
-            <div class="chips">
-              <span class="chip">AI engineer</span><span class="chip">Full stack</span><span class="chip">Cybersecurity</span><span class="chip">CTF</span><span class="chip">UI systems</span><span class="chip">Demos</span>
+      <aside class="hero-panel reveal" aria-label="Team focus">
+        <div class="panel-inner">
+          <div class="panel-top">
+            <div>
+              <h2>Engineering studio mindset.</h2>
+              <p>Lean team, broad execution, strong project proof.</p>
             </div>
+            <span class="status">building</span>
+          </div>
+
+          <div class="focus-stack">
+            <article class="focus-item">
+              <span class="focus-icon">AI</span>
+              <div>
+                <h3>AI engineering</h3>
+                <p>Learning systems, proof engines, assistants, dashboards, structured outputs, and practical workflows.</p>
+              </div>
+            </article>
+            <article class="focus-item">
+              <span class="focus-icon">FS</span>
+              <div>
+                <h3>Full-stack product building</h3>
+                <p>Frontend craft, backend logic, API flows, data handling, deployment paths, and complete MVPs.</p>
+              </div>
+            </article>
+            <article class="focus-item">
+              <span class="focus-icon">SEC</span>
+              <div>
+                <h3>Defensive cybersecurity</h3>
+                <p>Security tooling, safe analysis, risk scoring, incident-style reporting, and legal CTF practice.</p>
+              </div>
+            </article>
+            <article class="focus-item">
+              <span class="focus-icon">UX</span>
+              <div>
+                <h3>Product interface craft</h3>
+                <p>Clear visual systems, responsive layouts, motion, dashboards, product pages, and interaction details.</p>
+              </div>
+            </article>
           </div>
         </div>
       </aside>
     </section>
 
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>AI systems that teach, investigate, and assist</span>
-        <span>Full-stack demos with real flows</span>
-        <span>Defensive security and legal CTF practice</span>
-        <span>Pixel-era energy, modern responsive layout</span>
-        <span>Project proof over empty claims</span>
-        <span>AI systems that teach, investigate, and assist</span>
-        <span>Full-stack demos with real flows</span>
-        <span>Defensive security and legal CTF practice</span>
-        <span>Pixel-era energy, modern responsive layout</span>
-        <span>Project proof over empty claims</span>
-      </div>
-    </div>
-
-    <section class="section wrap" id="proof">
+    <section class="section wrap" id="identity">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Proof-first identity</span>
-          <h2>Not a generic crew page.</h2>
+          <span class="section-kicker">Team identity</span>
+          <h2>A sharper brand for a serious builder team.</h2>
         </div>
         <p>
-          The site is built around evidence: project depth, technical taste, security discipline, and a team story that feels credible without pretending to be something it is not.
+          The team is positioned around three principles: build real products, practice security responsibly,
+          and present technical work with clarity.
         </p>
       </div>
 
-      <div class="proof-grid">
-        <article class="big-panel pixel reveal">
-          <h3>The team has outgrown a single label.</h3>
+      <div class="brand-system">
+        <article class="brand-board reveal">
+          <span class="section-kicker">Brand language</span>
+          <h3>Build · Secure · Ship</h3>
           <p>
-            CTF still matters, but it is not the full identity. The stronger story is a builder team that combines AI engineering,
-            full-stack product work, frontend craft, data experiments, and defensive cybersecurity. That gives the team more range,
-            more credibility, and a cleaner direction for future projects.
+            This line captures the team’s operating style. Build means turning ideas into working systems.
+            Secure means thinking carefully about risk, validation, and defensive practice. Ship means making
+            projects understandable, usable, and ready to show.
           </p>
-          <div class="proof-list">
-            <div class="proof-row"><strong>01</strong><div><b>AI that does work</b><span>Tutors, assistants, proof engines, dashboards, incident workflows, and structured outputs.</span></div></div>
-            <div class="proof-row"><strong>02</strong><div><b>Interfaces with character</b><span>Responsive pages, motion, pixel-era styling, clean hierarchy, and product-grade polish.</span></div></div>
-            <div class="proof-row"><strong>03</strong><div><b>Security without cringe</b><span>Ethical CTF, defensive tooling, analysis workflows, safer recommendations, and clear reports.</span></div></div>
-            <div class="proof-row"><strong>04</strong><div><b>Complete small systems</b><span>Idea, UI, logic, README, deployment path, demo flow, and presentation all matter.</span></div></div>
+          <div class="chips" style="margin-top:22px">
+            <span class="chip accent">AI-first products</span>
+            <span class="chip accent">Full-stack execution</span>
+            <span class="chip accent">Defensive security</span>
+            <span class="chip accent">Clean public proof</span>
           </div>
         </article>
 
-        <div class="side-stack">
-          <article class="side-card pixel reveal">
-            <span class="label">Direction</span>
-            <h3>Builds first. Claims second.</h3>
-            <p>The team page should make someone want to open the projects, not just read buzzwords. Every section points back to proof.</p>
+        <div class="brand-principles reveal">
+          <article class="principle">
+            <strong>01</strong>
+            <div><b>Useful over decorative</b><span>Every project needs a real workflow, a clear user, or a practical learning outcome.</span></div>
           </article>
-          <article class="side-card pixel reveal">
-            <span class="label">Style</span>
-            <h3>90s arcade, modern engineering.</h3>
-            <p>The visual language is intentionally loud: pixel borders, CRT texture, hard shadows, terminal windows, and responsive layouts.</p>
+          <article class="principle">
+            <strong>02</strong>
+            <div><b>Security without hype</b><span>CTF and security work stay ethical, defensive, and skill-focused.</span></div>
           </article>
+          <article class="principle">
+            <strong>03</strong>
+            <div><b>Proof over claims</b><span>Repos, demos, reports, interfaces, and project stories make the team credible.</span></div>
+          </article>
+          <article class="principle">
+            <strong>04</strong>
+            <div><b>Polish as a standard</b><span>The team cares about spacing, hierarchy, copy, responsiveness, and how the work feels.</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">What we do</span>
+          <h2>Focused work across product, AI, and security.</h2>
+        </div>
+        <p>
+          The team combines engineering execution with security awareness and product presentation.
+          That mix makes small projects feel complete and credible.
+        </p>
+      </div>
+
+      <div class="split">
+        <article class="card large-card reveal">
+          <span class="section-kicker">Core capability</span>
+          <h3>Small team. Wide stack. Clear output.</h3>
+          <p>
+            The team works best when a project needs both execution and taste: an interface that feels good,
+            a system that works, a security mindset that avoids careless decisions, and documentation that
+            makes the result easy to judge.
+          </p>
+          <ul class="list">
+            <li>AI systems for tutoring, analysis, recommendations, proof, and workflow support.</li>
+            <li>Full-stack builds using JavaScript, React, TypeScript, Python, FastAPI, Flask, SQLite, and APIs.</li>
+            <li>Defensive security projects with risk scoring, safe recommendations, and report-style outputs.</li>
+            <li>CTF learning across web, crypto, forensics, reverse basics, Linux workflow, and writeups.</li>
+          </ul>
+        </article>
+
+        <div class="grid-3" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+          <article class="card reveal"><span class="card-index">AI</span><h3>AI workflows</h3><p>Assistants, tutors, scoring logic, structured reports, and practical automation.</p></article>
+          <article class="card reveal"><span class="card-index">WEB</span><h3>Full-stack apps</h3><p>Responsive interfaces, backend APIs, database flows, and deployable prototypes.</p></article>
+          <article class="card reveal"><span class="card-index">SEC</span><h3>Security tools</h3><p>Code review concepts, URL analysis, CTF helpers, risk explanations, and safe testing.</p></article>
+          <article class="card reveal"><span class="card-index">UX</span><h3>Frontend craft</h3><p>Motion, visual hierarchy, dashboards, canvas experiments, and product-grade layouts.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">Skill system</span>
+          <h2>Professional capability matrix.</h2>
+        </div>
+        <p>
+          The team’s skill profile is framed like an engineering capability board: each area shows
+          foundation, applied output, and project proof.
+        </p>
+      </div>
+
+      <div class="skill-board reveal">
+        <div class="skill-board-top">
+          <h3>AI engineer. Full-stack developer. Security-aware builder.</h3>
+          <p>
+            NOtFound_404 is strongest when skills overlap. AI becomes more useful when it has a real UI,
+            backend logic, data flow, and a clear user problem. Security becomes more valuable when it improves
+            the quality of the system instead of existing as a separate label.
+          </p>
+        </div>
+
+        <div class="skill-matrix" role="table" aria-label="Team skills matrix">
+          <div class="matrix-cell matrix-head">Capability</div>
+          <div class="matrix-cell matrix-head">Foundation</div>
+          <div class="matrix-cell matrix-head">Applied output</div>
+          <div class="matrix-cell matrix-head">Proof direction</div>
+
+          <div class="matrix-cell"><span class="level">Core</span><h4>AI engineering</h4><p>LLM-assisted workflows, structured outputs, validation, recommendation logic, and user-focused automation.</p></div>
+          <div class="matrix-cell"><h4>Python + product logic</h4><p>FastAPI, Flask, Pydantic-style structure, API design, SQLite, and practical backend patterns.</p></div>
+          <div class="matrix-cell"><h4>Useful AI systems</h4><p>Tutors, proof engines, assistants, dashboards, reports, and analysis flows with clear user value.</p></div>
+          <div class="matrix-cell"><h4>BreachPilot / TUTall / SkillProof AI</h4><p>AI projects that connect workflow, interface, output quality, and presentation.</p></div>
+
+          <div class="matrix-cell"><span class="level">Core</span><h4>Full-stack development</h4><p>Frontend, backend, APIs, persistence, deployment flow, responsive design, and maintainable project structure.</p></div>
+          <div class="matrix-cell"><h4>Web + APIs</h4><p>HTML, CSS, JavaScript, React, TypeScript, Python services, REST patterns, and data handling.</p></div>
+          <div class="matrix-cell"><h4>Complete prototypes</h4><p>Working demos with UI, logic, state, data, documentation, and a clean public path.</p></div>
+          <div class="matrix-cell"><h4>TaliinAtlas / Store AI / MoodMeal</h4><p>Full-stack product directions with real user flows and understandable outputs.</p></div>
+
+          <div class="matrix-cell"><span class="level">Core</span><h4>Defensive cybersecurity</h4><p>Secure coding awareness, risk scoring, suspicious link analysis, static review ideas, and safe recommendations.</p></div>
+          <div class="matrix-cell"><h4>Security fundamentals</h4><p>Linux, networking basics, web security concepts, reporting, careful testing, and ethical practice.</p></div>
+          <div class="matrix-cell"><h4>Risk-aware tools</h4><p>Security reviews, URL checks, report generation, analyst-style summaries, and safer decision support.</p></div>
+          <div class="matrix-cell"><h4>DevGuard AI / AegisLink</h4><p>Defensive tooling direction connected to clear findings, explanations, and report outputs.</p></div>
+
+          <div class="matrix-cell"><span class="level">Applied</span><h4>Product UI / UX</h4><p>Visual hierarchy, responsive layouts, motion, hover states, dashboards, product pages, and interaction clarity.</p></div>
+          <div class="matrix-cell"><h4>Frontend craft</h4><p>Clean CSS, component thinking, layout systems, canvas interaction, and polished presentation.</p></div>
+          <div class="matrix-cell"><h4>Memorable interfaces</h4><p>Interfaces that help projects feel trustworthy, usable, and easier to evaluate.</p></div>
+          <div class="matrix-cell"><h4>HuruInk / HelioGuard / portfolio work</h4><p>Gesture UI, dashboards, and public pages that show visual taste and interaction thinking.</p></div>
+
+          <div class="matrix-cell"><span class="level">Applied</span><h4>CTF capability</h4><p>Legal challenge practice across web, crypto, forensics, reverse basics, Linux workflow, and writeup discipline.</p></div>
+          <div class="matrix-cell"><h4>Problem-solving discipline</h4><p>Debugging, enumeration, repeatable notes, scripts, challenge analysis, and careful validation.</p></div>
+          <div class="matrix-cell"><h4>Security learning pipeline</h4><p>CTF practice becomes stronger engineering judgment and better defensive instincts.</p></div>
+          <div class="matrix-cell"><h4>Crypto Tool / my_ctf_tools</h4><p>Helper scripts and workflows that support consistent challenge solving.</p></div>
+        </div>
+
+        <div class="skill-tags">
+          <span class="chip accent">AI Engineering</span>
+          <span class="chip accent">Full-stack Development</span>
+          <span class="chip accent">Frontend UI</span>
+          <span class="chip accent">Backend APIs</span>
+          <span class="chip accent">Defensive Security</span>
+          <span class="chip accent">CTF Practice</span>
+          <span class="chip accent">Risk Scoring</span>
+          <span class="chip accent">Report Generation</span>
+          <span class="chip accent">GitHub Proof</span>
+          <span class="chip accent">Hackathon Delivery</span>
         </div>
       </div>
     </section>
@@ -1129,18 +1363,19 @@
     <section class="section wrap" id="projects">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Project archive</span>
-          <h2>Selected builds worth showing.</h2>
+          <span class="section-kicker">Projects</span>
+          <h2>Selected builds from the team ecosystem.</h2>
         </div>
         <p>
-          A curated grid from the team ecosystem: AI tools, full-stack prototypes, security utilities, frontend experiments, data projects, and team-oriented builds.
+          A curated set of AI tools, full-stack prototypes, security utilities, frontend experiments,
+          data projects, and team-oriented concepts.
         </p>
       </div>
 
       <div class="filters reveal" role="tablist" aria-label="Project filters">
         <button class="filter-btn active" type="button" data-filter="all">All</button>
         <button class="filter-btn" type="button" data-filter="ai">AI</button>
-        <button class="filter-btn" type="button" data-filter="fullstack">Full stack</button>
+        <button class="filter-btn" type="button" data-filter="fullstack">Full-stack</button>
         <button class="filter-btn" type="button" data-filter="security">Security</button>
         <button class="filter-btn" type="button" data-filter="frontend">Frontend</button>
         <button class="filter-btn" type="button" data-filter="data">Data</button>
@@ -1151,158 +1386,137 @@
       <div class="project-grid" id="projectGrid" aria-live="polite"></div>
     </section>
 
-    <section class="section wrap" id="skills">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-tag">Skill matrix</span>
-          <h2>What the team can bring.</h2>
-        </div>
-        <p>
-          This skill section is intentionally broader: AI engineering, full-stack delivery, frontend craft, defensive security, CTF practice, and presentation discipline.
-        </p>
-      </div>
-
-      <div class="skill-grid">
-        <article class="skill-card pixel reveal"><span class="label">AI engineer</span><h3>Workflow AI</h3><p>LLM-assisted tools, tutoring flows, structured reports, recommendations, validation-aware outputs, and assistant logic tied to real use cases.</p></article>
-        <article class="skill-card pixel reveal"><span class="label">Full stack</span><h3>Product systems</h3><p>Frontend, backend, APIs, persistence, data handling, deployment flow, and project structure that makes prototypes testable.</p></article>
-        <article class="skill-card pixel reveal"><span class="label">Frontend</span><h3>UI experience</h3><p>Responsive layouts, interaction design, motion, canvas experiments, visual hierarchy, dashboards, and public-facing product pages.</p></article>
-        <article class="skill-card pixel reveal"><span class="label">Backend</span><h3>APIs and logic</h3><p>Python, FastAPI, Flask, SQLite, scoring rules, automation scripts, clean data flow, and practical service design.</p></article>
-        <article class="skill-card pixel reveal"><span class="label">Security</span><h3>Defensive thinking</h3><p>Secure coding awareness, suspicious link analysis, code review concepts, risk scoring, incident-style reports, and safe recommendations.</p></article>
-        <article class="skill-card pixel reveal"><span class="label">CTF</span><h3>Challenge depth</h3><p>Legal CTF practice across web, crypto, forensics, reverse basics, Linux workflow, notes, writeups, and repeatable solving habits.</p></article>
-      </div>
-    </section>
-
     <section class="section wrap" id="team">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Core crew</span>
-          <h2>The people behind the work.</h2>
+          <span class="section-kicker">Team</span>
+          <h2>The people behind the builds.</h2>
         </div>
         <p>
-          Only the current core members are listed here. The profiles are written to sound like a real team, with clear roles and evidence-based direction.
+          A compact team profile focused on role clarity, technical direction, and the kind of work each
+          member contributes.
         </p>
       </div>
 
-      <div class="team-grid">
-        <article class="member-card feature pixel reveal">
+      <div class="member-grid">
+        <article class="card member-card reveal">
           <div class="member-head">
             <div class="avatar">BE</div>
             <div class="member-meta">
-              <small>BeBe / Nero_404</small>
+              <span>BeBe / Nero_404</span>
               <h3>Bayarbayasgalan Enkhtulga</h3>
             </div>
           </div>
-          <div class="member-body">
-            <span class="role">Team Lead / AI Engineer / Full-Stack Developer</span>
-            <p>
-              Bayarbayasgalan drives the team with a project-first mindset: AI systems, defensive security workflows, polished frontend experiences, and demos that can be judged quickly. His strongest work connects useful AI behavior with clean product presentation.
-            </p>
-            <ul class="list">
-              <li>Leads project direction, site presentation, and public-facing build quality.</li>
-              <li>Builds AI tutors, proof engines, dashboards, incident workflows, and gesture-based UI experiments.</li>
-              <li>Focuses on polished interfaces, practical systems, and credible technical storytelling.</li>
-            </ul>
-            <div class="link-row">
-              <a class="card-link" href="https://bebecpp.github.io/my_blog/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-              <a class="card-link" href="https://github.com/BeBecpp" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
+          <span class="role">Team Lead · AI Engineer · Full-stack Developer</span>
+          <p>
+            Bayarbayasgalan leads the team with a product-first engineering style. His work connects practical
+            AI systems, defensive security workflows, frontend polish, and project presentation into complete demos.
+          </p>
+          <div class="chips">
+            <span class="chip">AI Products</span><span class="chip">Frontend</span><span class="chip">FastAPI</span><span class="chip">Cybersecurity</span>
+          </div>
+          <ul class="list">
+            <li>Strongest direction: AI learning systems, incident workflows, proof engines, dashboards, and gesture UI.</li>
+            <li>Build style: polished interfaces, clear user flows, practical tools, and strong public project stories.</li>
+            <li>Team role: direction, presentation quality, frontend craft, and AI/security product strategy.</li>
+          </ul>
+          <div class="member-links">
+            <a class="card-link" href="https://bebecpp.github.io/my_blog/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a class="card-link" href="https://github.com/BeBecpp" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
 
-        <article class="member-card pixel reveal">
-          <div class="member-head">
-            <div class="avatar">KH</div>
-            <div class="member-meta">
-              <small>Void / FluxKnight</small>
-              <h3>Khuslen</h3>
+        <div class="member-column">
+          <article class="card member-card reveal">
+            <div class="member-head">
+              <div class="avatar">KH</div>
+              <div class="member-meta">
+                <span>Void / FluxKnight</span>
+                <h3>Khuslen</h3>
+              </div>
             </div>
-          </div>
-          <div class="member-body">
-            <span class="role">Full-Stack Developer / Cybersecurity Builder</span>
+            <span class="role">Full-stack Developer · Cybersecurity Builder</span>
             <p>
-              Khuslen brings a practical build style shaped by C++, Python, backend APIs, cybersecurity learning, and clean prototypes. He is strongest where software structure and security thinking need to meet.
+              Khuslen brings a practical engineering profile built around Python, C++, backend APIs, security
+              learning, fast prototyping, and clear technical explanation.
             </p>
-            <ul class="list">
-              <li>Works on defensive tools, backend APIs, and useful security-focused prototypes.</li>
-              <li>Builds with a clear loop: understand, prototype, debug, explain.</li>
-              <li>Contributes CTF discipline, documentation habits, and pragmatic engineering.</li>
-            </ul>
-            <div class="link-row">
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">C++</span><span class="chip">APIs</span><span class="chip">CTF</span>
+            </div>
+            <div class="member-links">
               <a class="card-link" href="https://fluxknight.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
               <a class="card-link" href="https://github.com/FluxKnight" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="member-card pixel reveal">
-          <div class="member-head">
-            <div class="avatar">TM</div>
-            <div class="member-meta">
-              <small>Bloxer_404</small>
-              <h3>Tsogterdene Margaderdene</h3>
+          <article class="card member-card reveal">
+            <div class="member-head">
+              <div class="avatar">TM</div>
+              <div class="member-meta">
+                <span>Bloxer_404</span>
+                <h3>Tsogterdene Margaderdene</h3>
+              </div>
             </div>
-          </div>
-          <div class="member-body">
             <span class="role">Cybersecurity Specialist</span>
             <p>
-              Tsogterdene is presented as the team's cybersecurity specialist: focused on security fundamentals, safe practice, technical discipline, and team support. This profile is production-ready as a placeholder and easy to personalize later.
+              Tsogterdene supports the team’s security direction through practical cybersecurity learning,
+              CTF discipline, Linux workflow, safe testing habits, and team-focused technical review.
             </p>
-            <ul class="list">
-              <li>Supports CTF practice, Linux workflow, and security learning inside the team.</li>
-              <li>Contributes to analysis, notes, safe testing, and technical review habits.</li>
-              <li>Placeholder copy is intentionally clean so the final profile can be edited later.</li>
-            </ul>
-          </div>
-        </article>
+            <div class="chips">
+              <span class="chip">Cybersecurity</span><span class="chip">CTF</span><span class="chip">Linux</span><span class="chip">Analysis</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section wrap" id="process">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Operating system</span>
-          <h2>How we turn ideas into proof.</h2>
+          <span class="section-kicker">Process</span>
+          <h2>How the team ships.</h2>
         </div>
         <p>
-          The workflow is simple but serious: define the problem, ship a small version, test weak points, polish the experience, and explain the result clearly.
+          The working loop is simple: define the use case, build the core flow, test the weak parts,
+          polish the interface, document the result, and present it clearly.
         </p>
       </div>
 
       <div class="process-grid">
-        <article class="process-card pixel reveal" data-step="01"><span class="label">Input</span><h3>Define the mission</h3><p>Start with a real user, challenge, or workflow. A project title is not enough; the system needs a reason to exist.</p></article>
-        <article class="process-card pixel reveal" data-step="02"><span class="label">Build</span><h3>Ship the core loop</h3><p>Create the smallest working version that proves the idea: interface, logic, data, output, and a path to demo.</p></article>
-        <article class="process-card pixel reveal" data-step="03"><span class="label">Debug</span><h3>Test the weak parts</h3><p>Look for confusing flows, broken states, security issues, bad copy, weak responsiveness, and missing explanations.</p></article>
-        <article class="process-card pixel reveal" data-step="04"><span class="label">Polish</span><h3>Make it memorable</h3><p>Improve UI, motion, words, project cards, README, screenshots, and the way people understand the work.</p></article>
-        <article class="process-card pixel reveal" data-step="05"><span class="label">Present</span><h3>Turn work into proof</h3><p>Publish the demo, write the story, expose the links, and make the project easy to evaluate.</p></article>
-        <article class="process-card pixel reveal" data-step="06"><span class="label">Repeat</span><h3>Level up the team</h3><p>Use every build to improve engineering taste, security discipline, communication, and delivery speed.</p></article>
+        <article class="card process-card reveal"><span class="card-index">01</span><h3>Frame the problem</h3><p>Start with a user, workflow, challenge, or learning goal that gives the build a reason to exist.</p></article>
+        <article class="card process-card reveal"><span class="card-index">02</span><h3>Build the core loop</h3><p>Create the smallest version that proves the idea with real interaction, logic, and output.</p></article>
+        <article class="card process-card reveal"><span class="card-index">03</span><h3>Strengthen the system</h3><p>Debug edge cases, improve security assumptions, clean the data flow, and reduce confusion.</p></article>
+        <article class="card process-card reveal"><span class="card-index">04</span><h3>Present the proof</h3><p>Refine the UI, write the explanation, expose the links, and make the project easy to evaluate.</p></article>
       </div>
     </section>
 
     <section class="section wrap" id="contact">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Contact</span>
-          <h2>Ready for projects, demos, and collaboration.</h2>
+          <span class="section-kicker">Contact</span>
+          <h2>Open to projects, demos, and collaboration.</h2>
         </div>
         <p>
-          For hackathons, team opportunities, technical collaboration, or project discussion, use the public links below.
+          For hackathons, collaboration, security-focused builds, AI product ideas, or project discussion,
+          contact the team through the links below.
         </p>
       </div>
 
       <div class="contact-grid">
-        <article class="contact-card pixel reveal">
-          <span class="label">Direct</span>
-          <h3>Contact the team</h3>
-          <p>Use this while the brand name and logo are still in transition. The website is built to be easy to rename later.</p>
+        <article class="contact-card reveal">
+          <span class="card-index">Direct</span>
+          <h3>Team contact</h3>
+          <p>Use this address for project discussions, collaboration, and team opportunities.</p>
           <div class="hero-actions">
             <a class="btn primary" href="mailto:pynotix.py@gmail.com">pynotix.py@gmail.com</a>
             <button class="btn" type="button" id="copyEmail">Copy email</button>
           </div>
         </article>
-        <article class="contact-card pixel reveal">
-          <span class="label">Proof links</span>
-          <h3>Open the work</h3>
-          <div class="link-row">
+        <article class="contact-card reveal">
+          <span class="card-index">Links</span>
+          <h3>Public proof</h3>
+          <p>Explore the team repository and member portfolios.</p>
+          <div class="member-links" style="margin-top:18px">
             <a class="card-link" href="https://github.com/BeBecpp/NOtFound_404-Web" target="_blank" rel="noopener noreferrer">Team repo</a>
             <a class="card-link" href="https://bebecpp.github.io/my_blog/" target="_blank" rel="noopener noreferrer">BeBe portfolio</a>
             <a class="card-link" href="https://github.com/BeBecpp" target="_blank" rel="noopener noreferrer">BeBe GitHub</a>
@@ -1314,25 +1528,25 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <span>(c) 2026 <span id="brandFooter">NOtFound_404</span>. AI / full-stack / defensive security.</span>
-    <span>No logo embedded. Rename-ready build.</span>
+  <footer class="footer">
+    <span>© 2026 <span id="brandFooter">NOtFound_404</span>. Build · Secure · Ship.</span>
+    <span>AI · full-stack · defensive security.</span>
   </footer>
 
   <script>
     const BRAND_NAME = 'NOtFound_404';
 
     const projects = [
-      { name: 'BreachPilot', type: 'Security + AI', category: 'security ai fullstack team', desc: 'MCP-powered incident commander concept for Splunk workflows: gather evidence, investigate alerts, and generate analyst-ready briefs.', tags: ['Splunk', 'MCP', 'Incident Ops'], url: 'https://github.com/BeBecpp/BreachPilot' },
+      { name: 'BreachPilot', type: 'Security + AI', category: 'security ai fullstack team', desc: 'MCP-powered incident workflow concept for Splunk: evidence gathering, investigation support, and analyst-ready incident briefs.', tags: ['Splunk', 'MCP', 'Incident Ops'], url: 'https://github.com/BeBecpp/BreachPilot' },
       { name: 'TUTall Backend', type: 'AI', category: 'ai fullstack', desc: 'Backend system for guided STEM learning with explanations, quizzes, hints, and progress-oriented learning flows.', tags: ['Python', 'AI Tutor', 'Learning'], url: 'https://github.com/BeBecpp/TUTall_backend' },
-      { name: 'TUTall Frontend', type: 'Frontend', category: 'frontend fullstack ai', desc: 'Clean learning interface for TUTall, designed to make AI-assisted studying feel direct and easy to follow.', tags: ['JavaScript', 'Education UI', 'Product'], url: 'https://github.com/BeBecpp/TUTall_frontend' },
-      { name: 'HelioGuard AI', type: 'Data + AI', category: 'data ai frontend', desc: 'NASA-data-inspired dashboard for space risk intelligence, built as a stronger visual story around data and AI.', tags: ['NASA Data', 'Dashboard', 'Risk'], url: 'https://github.com/BeBecpp/helioguard-ai' },
+      { name: 'TUTall Frontend', type: 'Frontend', category: 'frontend fullstack ai', desc: 'Learning interface for TUTall, designed to make AI-assisted studying clean, structured, and easy to follow.', tags: ['JavaScript', 'Education UI', 'Product'], url: 'https://github.com/BeBecpp/TUTall_frontend' },
+      { name: 'HelioGuard AI', type: 'Data + AI', category: 'data ai frontend', desc: 'NASA-data-inspired dashboard direction for space risk intelligence, built around clear visualization and product framing.', tags: ['NASA Data', 'Dashboard', 'Risk'], url: 'https://github.com/BeBecpp/helioguard-ai' },
       { name: 'SkillProof AI', type: 'AI', category: 'ai fullstack team', desc: 'Turns GitHub activity into structured skill evidence, portfolio proof, and reportable developer signals.', tags: ['GitHub', 'Reports', 'Scoring'], url: 'https://skillproof-ai-9u61.onrender.com/' },
-      { name: 'HuruInk', type: 'Frontend', category: 'frontend ai', desc: 'Webcam-powered drawing experience using gesture interaction and canvas rendering for a playful technical demo.', tags: ['Gesture', 'Canvas', 'Vision'], url: 'https://bebecpp.github.io/HuruInk/' },
+      { name: 'HuruInk', type: 'Frontend', category: 'frontend ai', desc: 'Webcam-powered drawing experience using gesture interaction and canvas rendering for a polished browser demo.', tags: ['Gesture', 'Canvas', 'Vision'], url: 'https://bebecpp.github.io/HuruInk/' },
       { name: 'TaliinAtlas', type: 'AI + UX', category: 'ai frontend', desc: 'Visual learning-map platform that turns complex topics into connected paths and easier study structure.', tags: ['Learning Map', 'UX', 'TypeScript'], url: 'https://taliin-atlas.vercel.app/' },
-      { name: 'Store AI Assistant', type: 'AI', category: 'ai fullstack', desc: 'Small-store assistant concept that answers from catalog data instead of guessing, keeping the output grounded.', tags: ['Catalog', 'Assistant', 'Python'], url: 'https://github.com/BeBecpp/Store_AI_Assistant' },
-      { name: 'MoodMeal AI', type: 'AI', category: 'ai fullstack', desc: 'Recipe recommendation system that uses mood, ingredients, weather, meal time, and serving count.', tags: ['Flask', 'SQLite', 'Gemini'], url: 'https://github.com/BeBecpp/MoodMeal' },
-      { name: 'Blue Watch Lite', type: 'Utility', category: 'ai data', desc: 'Lightweight monitoring-oriented prototype focused on alerts, signals, and useful everyday workflows.', tags: ['Python', 'Alerts', 'Utility'], url: 'https://github.com/BeBecpp/Blue_Watch_lite' },
+      { name: 'Store AI Assistant', type: 'AI', category: 'ai fullstack', desc: 'Small-store assistant concept that answers from catalog data instead of guessing, keeping responses grounded.', tags: ['Catalog', 'Assistant', 'Python'], url: 'https://github.com/BeBecpp/Store_AI_Assistant' },
+      { name: 'MoodMeal AI', type: 'AI', category: 'ai fullstack', desc: 'Recipe recommendation system using mood, ingredients, weather, meal time, and serving count.', tags: ['Flask', 'SQLite', 'Gemini'], url: 'https://github.com/BeBecpp/MoodMeal' },
+      { name: 'Blue Watch Lite', type: 'Utility', category: 'ai data', desc: 'Lightweight monitoring-oriented prototype focused on alerts, signals, and useful day-to-day workflows.', tags: ['Python', 'Alerts', 'Utility'], url: 'https://github.com/BeBecpp/Blue_Watch_lite' },
       { name: 'ClapConnect', type: 'Frontend', category: 'frontend team', desc: 'Interaction-focused JavaScript project showing event logic, playful prototyping, and responsive UI thinking.', tags: ['JavaScript', 'Interaction', 'Prototype'], url: 'https://github.com/BeBecpp/ClapConnect' },
       { name: 'Midnight Tea Garden', type: 'Frontend', category: 'frontend', desc: 'Visual web experiment focused on atmosphere, creative UI direction, layout rhythm, and frontend taste.', tags: ['Creative UI', 'Visual', 'Mood'], url: 'https://github.com/BeBecpp/midnight_tea_garden' },
       { name: 'Crypto Tool', type: 'Security', category: 'security', desc: 'Beginner-friendly cryptography helper for CTF practice, repeatable decoding, and challenge-solving flow.', tags: ['Crypto', 'CTF', 'Python'], url: 'https://github.com/BeBecpp/Crypto-tool' },
@@ -1357,15 +1571,15 @@
         : projects.filter((project) => project.category.split(' ').includes(filter));
 
       projectGrid.innerHTML = filtered.map((project, index) => `
-        <article class="project-card pixel reveal visible" data-category="${project.category}">
+        <article class="card project-card reveal visible" data-category="${project.category}">
           <div class="project-top">
-            <span class="num">${String(index + 1).padStart(2, '0')}</span>
-            <span class="type">${project.type}</span>
+            <span class="project-num">${String(index + 1).padStart(2, '0')}</span>
+            <span class="project-type">${project.type}</span>
           </div>
           <h3>${project.name}</h3>
           <p>${project.desc}</p>
           <div class="chips">${project.tags.map((tag) => `<span class="chip">${tag}</span>`).join('')}</div>
-          <a class="card-link" href="${project.url}" target="_blank" rel="noopener noreferrer">Open project -></a>
+          <a class="card-link" href="${project.url}" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">→</span></a>
         </article>
       `).join('');
     }
@@ -1385,8 +1599,8 @@
     const navItems = Array.from(document.querySelectorAll('.nav-link'));
 
     menuBtn.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', String(open));
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
     navItems.forEach((link) => {
@@ -1402,7 +1616,7 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.13 });
+    }, { threshold: 0.14 });
 
     document.querySelectorAll('.reveal').forEach((node) => revealObserver.observe(node));
 
@@ -1410,8 +1624,8 @@
     const sectionObserver = new IntersectionObserver((entries) => {
       const active = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (!active) return;
-      const id = `#${active.target.id}`;
-      const link = navItems.find((item) => item.getAttribute('href') === id);
+      const target = `#${active.target.id}`;
+      const link = navItems.find((item) => item.getAttribute('href') === target);
       if (!link) return;
       navItems.forEach((item) => item.classList.remove('active'));
       link.classList.add('active');
@@ -1426,7 +1640,7 @@
         await navigator.clipboard.writeText(email);
         const previous = copyEmailBtn.textContent;
         copyEmailBtn.textContent = 'Copied';
-        setTimeout(() => copyEmailBtn.textContent = previous, 1300);
+        setTimeout(() => { copyEmailBtn.textContent = previous; }, 1300);
       } catch {
         window.location.href = `mailto:${email}`;
       }
